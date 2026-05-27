@@ -472,11 +472,103 @@ const OBJETIVOS = [
   }
 ];
 
+const CHAS_OBJETIVOS = [
+  {
+    id: "cha-relaxamento", nome: "Relaxamento e Ansiedade", icon: "ti-mood-calm", cor: "#5B2C6F", bg: "#F5EEF8",
+    imgQuery: "chamomile lavender herbal tea calm relax",
+    dica: "Camomila com melissa é a combinação mais suave e eficaz. Tome 30 min antes de dormir ou em momentos de tensão.",
+    chas: [
+      { nome: "Camomila", destaque: true, acao: "Apaziguadora do sistema nervoso", motivo: "A apigenina se liga aos receptores GABA-A do cérebro — mesmo mecanismo dos ansiolíticos, mas de forma suave e natural. Reduz tensão muscular sem causar dependência.", comoUsar: "1 colher de sopa em 200ml a 90°C por 5 min. 2–3 xícaras ao dia." },
+      { nome: "Melissa", destaque: true, acao: "Calmante e antiviral", motivo: "Inibe a enzima GABA-transaminase, aumentando GABA no cérebro. Reduz ansiedade e irritabilidade sem causar dependência.", comoUsar: "1 colher de sopa em 200ml a 90°C por 5 min. Combina bem com camomila." },
+      { nome: "Capim-cidreira", acao: "Relaxante e digestivo", motivo: "Citral e limoneno têm ação sedativa leve. Também reduz cólicas e espasmos intestinais ligados à ansiedade.", comoUsar: "2 folhas frescas ou 1 colher de chá seco em 200ml. Ótimo quente ou gelado." },
+      { nome: "Mulungu", acao: "Ansiolítico natural potente", motivo: "Alcaloides eritrinicos agem similar a benzodiazepínicos — reduzem ansiedade intensa e agitação. Um dos mais potentes da fitoterapia brasileira.", comoUsar: "1 colher de chá da casca em 200ml. Máximo 2 xícaras ao dia. Não usar na gravidez." },
+      { nome: "Passiflora", acao: "Ansiolítica e sedativa", motivo: "Flavonoides aumentam a atividade GABAérgica, reduzindo pensamentos acelerados. Aprovada pela ANVISA para ansiedade leve.", comoUsar: "1 colher de chá em 200ml. Combina com melissa e camomila." },
+      { nome: "Lavanda", acao: "Calmante aromático", motivo: "Linalool atua no sistema límbico reduzindo resposta ao estresse. Mais eficaz em aromaterapia, mas o chá também tem ação calmante suave.", comoUsar: "1 colher de chá das flores em 200ml a 80°C por 3 min. Não ferver." },
+      { nome: "Erva-doce", acao: "Digestivo e calmante", motivo: "Anetol tem ação espasmolítica e levemente sedativa. Ideal para ansiedade que se manifesta no sistema digestivo.", comoUsar: "1 colher de chá das sementes (levemente esmagadas) em 200ml." }
+    ]
+  },
+  {
+    id: "cha-sono", nome: "Sono", icon: "ti-moon", cor: "#1A3A6B", bg: "#EBF5FB",
+    imgQuery: "sleep calm night lavender herbal tea bedroom",
+    dica: "Mulungu + Valeriana é a combinação mais potente para insônia. Tome 1 hora antes de dormir. Evite telas após o chá.",
+    chas: [
+      { nome: "Mulungu", destaque: true, acao: "Sedativo natural potente", motivo: "O mais eficaz para insônia entre os chás brasileiros. Alcaloides eritrinicos reduzem a excitação neuronal e facilitam o início e manutenção do sono.", comoUsar: "1 colher de chá da casca em 200ml, 1 hora antes de dormir. Máximo 2x ao dia." },
+      { nome: "Valeriana", destaque: true, acao: "Indutora do sono", motivo: "Ácido valerênico inibe a degradação do GABA, prolongando efeito sedativo. Reduz o tempo para adormecer e melhora o sono profundo. Efeito acumulativo em 2 semanas.", comoUsar: "1 colher de chá da raiz em 200ml, 30–60 min antes de dormir." },
+      { nome: "Camomila com Mulungu", acao: "Combinação sinérgica", motivo: "Suavidade da camomila complementa a potência do mulungu, agindo em diferentes receptores. Ideal para ansiedade + dificuldade de dormir.", comoUsar: "Metade de cada em 200ml." },
+      { nome: "Melissa", acao: "Acalma a mente para dormir", motivo: "Reduz pensamentos acelerados noturnos — principal causa de insônia por ansiedade. Mais suave, ideal para casos leves.", comoUsar: "1 colher de sopa em 200ml, 30 min antes de dormir." },
+      { nome: "Maracujá", acao: "Relaxante e sedativo", motivo: "Flavonoides da casca têm ação sedativa comprovada. A folha é mais potente que o suco para fins medicinais.", comoUsar: "1 colher de chá das folhas secas em 200ml. Combina com camomila." }
+    ]
+  },
+  {
+    id: "cha-digestao", nome: "Digestão", icon: "ti-stomach", cor: "#3B6B2E", bg: "#E8F5E9",
+    imgQuery: "mint ginger digestive herbal tea stomach warm",
+    dica: "Hortelã ou gengibre após as refeições são os mais rápidos. Boldo antes das refeições protege o fígado.",
+    chas: [
+      { nome: "Hortelã", destaque: true, acao: "Digestivo e antiespasmódico", motivo: "Mentol relaxa os músculos do trato gastrointestinal, aliviando gases, distensão e cólon irritável. Efeito em 15–20 min.", comoUsar: "2 folhas frescas ou 1 colher de chá seco em 200ml a 80°C. Após refeições." },
+      { nome: "Boldo", destaque: true, acao: "Hepático e digestivo", motivo: "Boldina estimula a produção de bile, facilitando a digestão de gorduras e desintoxicando o fígado. Clássico para excessos alimentares.", comoUsar: "1 colher de chá em 200ml. Antes de refeições pesadas. Uso máx. 7 dias seguidos." },
+      { nome: "Espinheira-santa", acao: "Gástrica e antiulcerosa", motivo: "Triterpenos protegem a mucosa gástrica. Indicada para gastrite, refluxo e úlcera. Aprovada pela ANVISA.", comoUsar: "1 colher de chá em 200ml, 3x ao dia antes das refeições." },
+      { nome: "Gengibre", acao: "Digestivo e antiemético", motivo: "Gingeróis estimulam a motilidade gástrica e reduzem náusea. Também tem ação anti-inflamatória intestinal.", comoUsar: "2–3 fatias frescas ou 1 colher de chá do pó em 200ml. Após refeições." },
+      { nome: "Funcho", acao: "Carminativo e antiespasmódico", motivo: "Anetol relaxa a musculatura intestinal e expele gases. Muito eficaz para cólicas e distensão abdominal.", comoUsar: "1 colher de chá das sementes (esmagadas) em 200ml." },
+      { nome: "Carqueja", acao: "Digestivo e hepático", motivo: "Diterpenos têm ação colerética e antiulcerosa. Também reduz colesterol e tem ação hipoglicemiante leve.", comoUsar: "1 colher de chá em 200ml antes das refeições. Sabor amargo — pode adoçar com mel." }
+    ]
+  },
+  {
+    id: "cha-detox", nome: "Detox e Retenção", icon: "ti-droplet", cor: "#1A6B5C", bg: "#E8F5E9",
+    imgQuery: "hibiscus detox herbal tea red flower infusion",
+    dica: "Hibisco gelado é o mais saboroso e eficaz para retenção. Tome 2L ao dia nos primeiros 7 dias para resultados visíveis.",
+    chas: [
+      { nome: "Hibisco", destaque: true, acao: "Diurético e antioxidante", motivo: "Ácidos orgânicos têm ação diurética potente e inibem a amilase, reduzindo absorção de amido. Rico em antocianinas. Reduz retenção e pressão arterial.", comoUsar: "1 colher de sopa em 500ml de água fria por 12h (frio) ou 200ml quente por 5 min. Sem ferver." },
+      { nome: "Cavalinha", acao: "Diurético e remineralizante", motivo: "Flavonoides com ação diurética intensa. Rico em sílica que fortalece unhas, cabelo e ossos simultaneamente.", comoUsar: "1 colher de sopa em 200ml, 3x ao dia. Não usar por mais de 6 semanas consecutivas." },
+      { nome: "Chá Verde", acao: "Termogênico e diurético", motivo: "Catequinas e cafeína estimulam a oxidação de gordura com leve ação diurética. Dupla ação: detox + emagrecimento.", comoUsar: "1 colher de chá em 200ml a 80°C, 2x ao dia." },
+      { nome: "Dente-de-leão", acao: "Depurativo hepático", motivo: "Estimula a produção de bile e tem ação diurética. Um dos melhores depurativos hepáticos da fitoterapia.", comoUsar: "1 colher de chá da raiz seca em 200ml, 2x ao dia antes das refeições." },
+      { nome: "Salsaparrilha", acao: "Depurativo do sangue", motivo: "Saponinas eliminam toxinas pelo sistema linfático. Indicada para pele (acne, dermatite) e retenção de líquidos.", comoUsar: "1 colher de chá da raiz em 200ml, 2x ao dia. Uso máx. 30 dias." }
+    ]
+  },
+  {
+    id: "cha-imunidade", nome: "Imunidade", icon: "ti-shield", cor: "#1A5C38", bg: "#E8F5E9",
+    imgQuery: "ginger turmeric immune herbal tea spice hot",
+    dica: "Gengibre + Canela + Cúrcuma é o chá mais completo para imunidade. Use no inverno ou na primeira sensação de gripe.",
+    chas: [
+      { nome: "Gengibre", destaque: true, acao: "Antiviral e anti-inflamatório", motivo: "Gingeróis têm ação antiviral direta contra influenza. Reduz inflamação da garganta e estimula circulação para combater infecção.", comoUsar: "3–4 fatias frescas ou 1 colher de chá do pó. Combinar com limão e mel." },
+      { nome: "Cúrcuma", destaque: true, acao: "Imunomodulador", motivo: "Curcumina ativa células NK e macrófagos — primeira linha de defesa imune. SEMPRE com pitada de pimenta preta para absorção 2.000% maior.", comoUsar: "1 colher de chá + pimenta preta em 200ml de leite vegetal quente (golden milk)." },
+      { nome: "Equinácea", acao: "Estimulante imune", motivo: "Alquilamidas estimulam produção de leucócitos e ativam macrófagos. Aprovada para prevenção de resfriados. Fazer ciclos de 8 semanas.", comoUsar: "1 colher de chá em 200ml, 3x ao dia. Pausar 2 semanas a cada 8 semanas de uso." },
+      { nome: "Guaco", acao: "Expectorante e broncodilatador", motivo: "Cumarina tem ação broncodilatadora e expectorante. Aprovado pela ANVISA para tosse, bronquite e gripe.", comoUsar: "1 colher de sopa da folha em 200ml, 3x ao dia." },
+      { nome: "Anis-estrelado", acao: "Antiviral (shikimato)", motivo: "Ácido chiquímico é precursor do oseltamivir (Tamiflu). Ação antiviral contra influenza + expectorante e digestivo.", comoUsar: "2 estrelas em 200ml de água fervente por 5 min. Combinar com gengibre e canela." },
+      { nome: "Canela", acao: "Antimicrobiana e estimulante", motivo: "Cinamaldeído tem potente ação antimicrobiana e antifúngica. Estimula circulação para transporte de células imunes.", comoUsar: "1 pau ou 1 colher de chá do pó em 200ml. Combina com gengibre e cúrcuma." }
+    ]
+  },
+  {
+    id: "cha-feminino", nome: "Saúde Feminina", icon: "ti-gender-female", cor: "#8B2E4A", bg: "#FDEDEC",
+    imgQuery: "feminine herbal tea flowers rose natural women",
+    dica: "Amora é o carro-chefe para menopausa e TPM. Hibisco combina lindamente com amora para um blend funcional e delicioso.",
+    chas: [
+      { nome: "Amora", destaque: true, acao: "Fitoestrógeno natural", motivo: "Flavonoides da folha se ligam aos receptores de estrogênio, aliviando ondas de calor, suores noturnos e sintomas de menopausa e TPM. Aprovada pela ANVISA.", comoUsar: "1 colher de sopa em 200ml, 2–3x ao dia. Uso contínuo por pelo menos 30 dias." },
+      { nome: "Hibisco", acao: "Diurético e hormonal", motivo: "Fitoestrógenos e ação diurética combatem retenção de líquidos da TPM. Antioxidantes protegem as células ovarianas.", comoUsar: "1 colher de sopa em 500ml fria ou 200ml quente. Combinar com amora." },
+      { nome: "Calêndula", acao: "Anti-inflamatório uterino", motivo: "Flavonoides têm ação anti-inflamatória nos tecidos uterinos. Regula o ciclo menstrual e alivia cólicas.", comoUsar: "1 colher de sopa das flores em 200ml a 90°C por 5 min." },
+      { nome: "Uxi Amarelo", acao: "Hormônio feminino", motivo: "Triterpenos com ação progesterônica que equilibra os hormônios. Indicado para ovários policísticos, mioma e endometriose.", comoUsar: "1 colher de chá da casca em 200ml, 2x ao dia. Não usar na gravidez." },
+      { nome: "Unha de Gato", acao: "Anti-inflamatório pélvico", motivo: "Alcaloides oxindólicos têm ação anti-inflamatória que ajuda em endometriose e dores pélvicas crônicas.", comoUsar: "1 colher de chá da casca em 200ml, 2x ao dia. Evitar na gravidez e amamentação." }
+    ]
+  },
+  {
+    id: "cha-energia-foco", nome: "Energia e Foco", icon: "ti-brain", cor: "#8B6B1A", bg: "#FEFDE7",
+    imgQuery: "matcha green tea energy focus morning cup",
+    dica: "Matcha é a escolha premium — L-teanina + cafeína = energia limpa sem ansiedade. Chá verde é a versão acessível com o mesmo efeito.",
+    chas: [
+      { nome: "Matcha", destaque: true, acao: "Foco total sem ansiedade", motivo: "Maior concentração de L-teanina + cafeína de todos os chás. L-teanina potencializa o foco enquanto elimina a ansiedade da cafeína. Estado de alerta calmo único.", comoUsar: "1 colher de chá (2g) em 150ml a 70°C. Bater com fouet. Não usar água fervente — destrói a L-teanina." },
+      { nome: "Chá Verde", destaque: true, acao: "Termogênico e cognitivo", motivo: "L-teanina + cafeína + EGCG = foco, energia e proteção neuronal. Aumenta fluxo sanguíneo cerebral e estimula produção de BDNF.", comoUsar: "1 colher de chá em 200ml a 75–80°C por 2–3 min. Não ferver." },
+      { nome: "Chá Preto", acao: "Energia e atenção", motivo: "Maior teor de cafeína entre os chás (40–70mg por xícara). Teaflavinas têm ação cardioprotetora. Mais estimulante que o chá verde.", comoUsar: "1 colher de chá em 200ml fervente por 3–4 min. Pode adicionar leite vegetal." },
+      { nome: "Ginseng", acao: "Adaptógeno — energia e foco", motivo: "Ginsenosídeos modulam o eixo do estresse, aumentam produção de ATP e melhoram cognição sob fadiga. Um dos adaptógenos mais estudados do mundo.", comoUsar: "1 colher de chá da raiz em 200ml, 2x ao dia. Ciclos de 3 meses de uso e 1 de pausa." },
+      { nome: "Guaraná", acao: "Estimulante natural brasileiro", motivo: "Xantinas em combinação única que libera energia mais lenta que o café, evitando o crash. Também melhora a memória de curto prazo.", comoUsar: "½ colher de chá do pó em 200ml. Não usar à tarde/noite. Máximo 2x ao dia." }
+    ]
+  }
+];
+
 
 function App() {
   const [pagina, setPagina] = useState("home");
   const [produtoSelecionado, setProdutoSelecionado] = useState(null);
   const [objetivoSelecionado, setObjetivoSelecionado] = useState(null);
+  const [chaSelecionado, setChaSelecionado] = useState(null);
   const [busca, setBusca] = useState("");
   const [categoriaAtiva, setCategoriaAtiva] = useState("Todos");
   const [abaAtiva, setAbaAtiva] = useState("como-age");
@@ -493,7 +585,10 @@ function App() {
     setAbaAtiva("como-age");
   };
 
-  const abrirObjetivo = (obj) => { setObjetivoSelecionado(obj); setPagina("objetivo"); };
+  const abrirObjetivo = (obj) => {
+    if (obj.chas) { setChaSelecionado(obj); setPagina("cha"); }
+    else { setObjetivoSelecionado(obj); setPagina("objetivo"); }
+  };
 
   const voltar = () => {
     if (pagina === "produto" && produtoSelecionado?.voltarPara === "objetivo") {
@@ -504,10 +599,11 @@ function App() {
     setProdutoSelecionado(null);
   };
 
-  const voltarHome = () => { setPagina("home"); setProdutoSelecionado(null); setObjetivoSelecionado(null); };
+  const voltarHome = () => { setPagina("home"); setProdutoSelecionado(null); setObjetivoSelecionado(null); setChaSelecionado(null); };
 
   if (pagina === "produto" && produtoSelecionado) return <PaginaProduto produto={produtoSelecionado} onVoltar={voltar} onAbrirProduto={(p) => abrirProduto(p, produtoSelecionado?.voltarPara)} abaAtiva={abaAtiva} setAbaAtiva={setAbaAtiva} />;
   if (pagina === "objetivo" && objetivoSelecionado) return <PaginaObjetivo objetivo={objetivoSelecionado} onVoltar={voltarHome} onAbrirProduto={(p) => abrirProduto(p, "objetivo")} />;
+  if (pagina === "cha" && chaSelecionado) return <PaginaChaCategoria objetivo={chaSelecionado} onVoltar={voltarHome} />;
   return <PaginaHome produtosFiltrados={produtosFiltrados} busca={busca} setBusca={setBusca} categoriaAtiva={categoriaAtiva} setCategoriaAtiva={setCategoriaAtiva} onAbrirProduto={(p) => abrirProduto(p, "home")} onAbrirObjetivo={abrirObjetivo} />;
 }
 
@@ -549,6 +645,14 @@ function PaginaHome({ produtosFiltrados, busca, setBusca, categoriaAtiva, setCat
               <i className="ti ti-target" style={{fontSize:16}} aria-hidden="true"></i>
               Objetivos
             </button>
+            <button onClick={()=>setAbaHome("chas")}
+              style={{flex:1,padding:"12px 0",border:"none",background:"transparent",cursor:"pointer",
+                borderBottom:abaHome==="chas"?"3px solid #A8D070":"3px solid transparent",
+                color:abaHome==="chas"?"#A8D070":"rgba(255,255,255,0.55)",
+                fontFamily:"Arial,sans-serif",fontSize:13,fontWeight:700,display:"flex",alignItems:"center",justifyContent:"center",gap:6}}>
+              <i className="ti ti-leaf" style={{fontSize:16}} aria-hidden="true"></i>
+              Chás
+            </button>
           </div>
         </div>
       </div>
@@ -559,6 +663,119 @@ function PaginaHome({ produtosFiltrados, busca, setBusca, categoriaAtiva, setCat
       {abaHome === "objetivos" && (
         <PaginaObjetivos onAbrirObjetivo={onAbrirObjetivo} />
       )}
+      {abaHome === "chas" && (
+        <PaginaChas onAbrirCha={onAbrirObjetivo} />
+      )}
+    </div>
+  );
+}
+
+function ChaImage({ cha, height = 120 }) {
+  const [url, setUrl] = useState(_imageCache["cha_" + cha.id] || null);
+  const [err, setErr] = useState(false);
+  useEffect(() => {
+    if (_imageCache["cha_" + cha.id]) { setUrl(_imageCache["cha_" + cha.id]); return; }
+    if (!cha.imgQuery) return;
+    fetchUnsplashImage(cha.imgQuery).then(imgUrl => {
+      if (imgUrl) { _imageCache["cha_" + cha.id] = imgUrl; setUrl(imgUrl); }
+    });
+  }, [cha.id]);
+  if (err || !url) {
+    return (
+      <div style={{height, background:`linear-gradient(135deg,${cha.cor}55,${cha.cor}99)`,display:"flex",alignItems:"center",justifyContent:"center"}}>
+        <i className={`ti ${cha.icon}`} style={{fontSize:48,color:"#fff",opacity:0.9}} aria-hidden="true"></i>
+      </div>
+    );
+  }
+  return <img src={url} alt={cha.nome} onError={()=>setErr(true)} style={{width:"100%",height,objectFit:"cover",display:"block"}}/>;
+}
+
+function PaginaChas({ onAbrirCha }) {
+  return (
+    <div style={{padding:"20px 16px 40px",maxWidth:480,margin:"0 auto"}}>
+      <p style={{fontSize:13,color:"#888",marginBottom:20,fontFamily:"Arial,sans-serif",lineHeight:1.5}}>
+        Chás medicinais organizados por objetivo de saúde. Cada categoria traz os melhores chás, como preparar e por que funcionam.
+      </p>
+      <div style={{display:"grid",gridTemplateColumns:"repeat(2,minmax(0,1fr))",gap:12}}>
+        {CHAS_OBJETIVOS.map(cha => (
+          <div key={cha.id} onClick={()=>onAbrirCha(cha)}
+            style={{background:"#fff",borderRadius:16,overflow:"hidden",cursor:"pointer",
+              boxShadow:"0 2px 12px rgba(0,0,0,0.07)",
+              transition:"transform 0.15s,box-shadow 0.15s"}}
+            onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-2px)";e.currentTarget.style.boxShadow="0 6px 20px rgba(0,0,0,0.12)";}}
+            onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="0 2px 12px rgba(0,0,0,0.07)";}}>
+            <div style={{position:"relative",height:100,overflow:"hidden"}}>
+              <ChaImage cha={cha} height={100}/>
+              <div style={{position:"absolute",inset:0,background:`linear-gradient(to bottom,transparent 20%,rgba(0,0,0,0.55) 100%)`}}></div>
+              <div style={{position:"absolute",top:8,left:8,background:cha.cor,borderRadius:20,width:32,height:32,display:"flex",alignItems:"center",justifyContent:"center"}}>
+                <i className={`ti ${cha.icon}`} style={{fontSize:17,color:"#fff"}} aria-hidden="true"></i>
+              </div>
+            </div>
+            <div style={{padding:"10px 12px 14px",borderTop:`3px solid ${cha.cor}`}}>
+              <div style={{fontSize:14,fontWeight:700,color:"#1A2E0A",marginBottom:4,fontFamily:"Georgia,serif"}}>{cha.nome}</div>
+              <div style={{fontSize:11,color:"#888",fontFamily:"Arial,sans-serif"}}>{cha.chas.length} chás recomendados</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function PaginaChaCategoria({ objetivo, onVoltar }) {
+  return (
+    <div style={{minHeight:"100vh",background:"#F7F5F0",fontFamily:"Georgia,serif"}}>
+      <div style={{position:"relative",height:200,overflow:"hidden"}}>
+        <ChaImage cha={objetivo} height={200}/>
+        <div style={{position:"absolute",inset:0,background:`linear-gradient(to bottom,rgba(0,0,0,0.2) 0%,${objetivo.cor}EE 80%)`}}></div>
+        <div style={{position:"absolute",inset:0,padding:"18px 20px 20px",display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
+          <button onClick={onVoltar} style={{alignSelf:"flex-start",background:"rgba(255,255,255,0.22)",border:"none",borderRadius:50,padding:"7px 16px",color:"#fff",cursor:"pointer",fontSize:13,fontFamily:"Arial,sans-serif",display:"flex",alignItems:"center",gap:5}}>
+            <i className="ti ti-arrow-left" style={{fontSize:15}} aria-hidden="true"></i>Chás
+          </button>
+          <div>
+            <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:8}}>
+              <div style={{width:36,height:36,background:"rgba(255,255,255,0.22)",borderRadius:10,display:"flex",alignItems:"center",justifyContent:"center"}}>
+                <i className={`ti ${objetivo.icon}`} style={{fontSize:20,color:"#fff"}} aria-hidden="true"></i>
+              </div>
+              <h1 style={{fontSize:24,fontWeight:700,color:"#fff",margin:0,textShadow:"0 1px 4px rgba(0,0,0,0.3)"}}>{objetivo.nome}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{padding:"16px 18px 44px",maxWidth:480,margin:"0 auto"}}>
+        <div style={{background:objetivo.bg,borderRadius:14,padding:"14px 16px",borderLeft:`4px solid ${objetivo.cor}`,marginBottom:20}}>
+          <div style={{fontSize:10,fontWeight:700,color:objetivo.cor,textTransform:"uppercase",letterSpacing:1,fontFamily:"Arial,sans-serif",marginBottom:6}}>
+            💡 Dica do especialista
+          </div>
+          <div style={{fontSize:13,color:"#444",lineHeight:1.6,fontFamily:"Arial,sans-serif"}}>{objetivo.dica}</div>
+        </div>
+
+        <div style={{fontSize:13,fontWeight:700,color:"#555",textTransform:"uppercase",letterSpacing:1,fontFamily:"Arial,sans-serif",marginBottom:14}}>
+          Chás Recomendados
+        </div>
+
+        {objetivo.chas.map((cha, i) => (
+          <div key={i} style={{background:"#fff",borderRadius:14,marginBottom:12,overflow:"hidden",
+            boxShadow:cha.destaque?"0 3px 14px rgba(0,0,0,0.10)":"0 2px 8px rgba(0,0,0,0.06)",
+            border:cha.destaque?`2px solid ${objetivo.cor}33`:"2px solid transparent"}}>
+            <div style={{background:`linear-gradient(135deg,${objetivo.cor}22,${objetivo.cor}11)`,padding:"12px 16px 10px",borderBottom:`1px solid ${objetivo.cor}22`}}>
+              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:4}}>
+                <div style={{fontWeight:700,fontSize:16,color:"#1A2E0A",fontFamily:"Georgia,serif"}}>{cha.nome}</div>
+                {cha.destaque && <div style={{background:objetivo.cor,borderRadius:20,padding:"2px 10px",fontSize:10,color:"#fff",fontWeight:700,fontFamily:"Arial,sans-serif"}}>⭐ Principal</div>}
+              </div>
+              <div style={{fontSize:12,color:objetivo.cor,fontWeight:600,fontFamily:"Arial,sans-serif"}}>{cha.acao}</div>
+            </div>
+            <div style={{padding:"12px 16px 14px"}}>
+              <div style={{fontSize:13,color:"#555",lineHeight:1.65,fontFamily:"Arial,sans-serif",marginBottom:10}}>{cha.motivo}</div>
+              <div style={{background:objetivo.bg,borderRadius:9,padding:"9px 13px",borderLeft:`3px solid ${objetivo.cor}`}}>
+                <div style={{fontSize:9,fontWeight:700,color:objetivo.cor,textTransform:"uppercase",letterSpacing:1,fontFamily:"Arial,sans-serif",marginBottom:4}}>Como preparar</div>
+                <div style={{fontSize:12,color:"#444",lineHeight:1.5,fontFamily:"Arial,sans-serif"}}>{cha.comoUsar}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
