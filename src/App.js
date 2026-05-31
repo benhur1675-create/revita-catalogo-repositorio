@@ -35,7 +35,7 @@ const PRODUCT_QUERIES = {
   "granola":             "granola oats cereal",
   "cha-verde":           "matcha green tea powder",
   "whey-protein":       "whey protein powder supplement scoop white",
-  "maca-peruana":       "maca powder root andean superfood",
+  "maca-peruana":       "root vegetable natural organic",
   "acai-po":            "acai berry powder purple superfood bowl",
   "eritritol":          "erythritol sweetener crystals natural",
   "acucar-coco":        "coconut sugar natural brown sweetener",
@@ -45,7 +45,7 @@ const PRODUCT_QUERIES = {
   "tamara":             "dates fruit dried sweet natural",
   "goji-berry":         "goji berries red dried superfood",
   "canela":             "cinnamon sticks powder spice warm",
-  "levedura-nutricional":"nutritional yeast golden flakes healthy",
+  "levedura-nutricional":"yellow flakes grain natural healthy",
   "gergelim":           "sesame seeds white black healthy food",
   "ginkobiloba":        "ginkgo biloba green leaf herb",
   "farinha-grao-bico":  "chickpea flour healthy gluten free powder",
@@ -94,18 +94,36 @@ async function fetchUnsplashImage(query) {
 
 const _imageCache = {};
 
+// Fallback images for products that Unsplash doesn't find well
+const STATIC_FALLBACK_IMAGES = {
+  "maca-peruana":        "https://picsum.photos/seed/maca/400/280",
+  "levedura-nutricional":"https://picsum.photos/id/1054/400/280"
+};
+
+const STATIC_FALLBACK_CHA = {
+  "cha-sono": "https://picsum.photos/id/30/400/280"
+};
+
 function ProductImage({ produto, height = 160 }) {
-  const [url, setUrl] = useState(_imageCache[produto.id] || null);
+  const fallbackUrl = STATIC_FALLBACK_IMAGES[produto.id] || null;
+  const [url, setUrl] = useState(_imageCache[produto.id] || fallbackUrl || null);
+  const [tried, setTried] = useState(!!_imageCache[produto.id] || !!fallbackUrl);
   const [err, setErr] = useState(false);
 
   useEffect(() => {
     if (_imageCache[produto.id]) { setUrl(_imageCache[produto.id]); return; }
+    if (fallbackUrl) { setUrl(fallbackUrl); return; }
     const query = PRODUCT_QUERIES[produto.id];
     if (!query) return;
     fetchUnsplashImage(query).then(imgUrl => {
       if (imgUrl) { _imageCache[produto.id] = imgUrl; setUrl(imgUrl); }
     });
   }, [produto.id]);
+
+  const handleError = () => {
+    if (fallbackUrl && url !== fallbackUrl) { setUrl(fallbackUrl); setErr(false); return; }
+    setErr(true);
+  };
 
   if (err || !url) {
     return (
@@ -115,7 +133,7 @@ function ProductImage({ produto, height = 160 }) {
     );
   }
   return (
-    <img src={url} alt={produto.nome} onError={()=>setErr(true)}
+    <img src={url} alt={produto.nome} onError={handleError}
       style={{width:"100%",height,objectFit:"cover",display:"block",transition:"opacity 0.3s"}}/>
   );
 }
@@ -755,7 +773,7 @@ const CHAS_OBJETIVOS = [
   },
   {
     id: "cha-sono", nome: "Sono", icon: "ti-moon", cor: "#1A3A6B", bg: "#EBF5FB",
-    imgQuery: "chamomile tea sleep herbal night calm",
+    imgQuery: "herbal tea cup warm night",
     dica: "Mulungu + Valeriana é a combinação mais potente para insônia. Tome 1 hora antes de dormir. Evite telas após o chá.",
     chas: [
       { nome: "Mulungu", destaque: true, acao: "Sedativo natural potente", motivo: "O mais eficaz para insônia entre os chás brasileiros. Alcaloides eritrinicos reduzem a excitação neuronal e facilitam o início e manutenção do sono.", comoUsar: "1 colher de chá da casca em 200ml, 1 hora antes de dormir. Máximo 2x ao dia." },
