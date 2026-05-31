@@ -33,7 +33,26 @@ const PRODUCT_QUERIES = {
   "farinha-coco":        "coconut flour powder",
   "moringa":             "moringa green leaf",
   "granola":             "granola oats cereal",
-  "cha-verde":           "matcha green tea powder"
+  "cha-verde":           "matcha green tea powder",
+  "whey-protein":       "whey protein powder supplement scoop white",
+  "maca-peruana":       "maca root powder superfood peru",
+  "acai-po":            "acai berry powder purple superfood bowl",
+  "eritritol":          "erythritol sweetener crystals natural",
+  "acucar-coco":        "coconut sugar natural brown sweetener",
+  "quinoa":             "quinoa grain white bowl healthy food",
+  "castanha-para":      "brazil nuts amazon wooden bowl",
+  "amendoa":            "almonds handful healthy nuts food",
+  "tamara":             "dates fruit dried sweet natural",
+  "goji-berry":         "goji berries red dried superfood",
+  "canela":             "cinnamon sticks powder spice warm",
+  "levedura-nutricional":"nutritional yeast flakes golden bowl",
+  "gergelim":           "sesame seeds white black healthy food",
+  "ginkobiloba":        "ginkgo biloba green leaf herb",
+  "farinha-grao-bico":  "chickpea flour healthy gluten free powder",
+  "farinha-batata-doce":"sweet potato orange food healthy",
+  "hibisco":            "hibiscus flower dried red herbal",
+  "cranberry":          "cranberry dried red berries fruit",
+  "guarana-po":         "guarana berry amazon energy powder"
 };
 
 function ObjectiveImage({ objetivo, height = 120 }) {
