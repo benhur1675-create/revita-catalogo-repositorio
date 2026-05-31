@@ -35,7 +35,7 @@ const PRODUCT_QUERIES = {
   "granola":             "granola oats cereal",
   "cha-verde":           "matcha green tea powder",
   "whey-protein":       "whey protein powder supplement scoop white",
-  "maca-peruana":       "maca root powder superfood peru",
+  "maca-peruana":       "maca powder root andean superfood",
   "acai-po":            "acai berry powder purple superfood bowl",
   "eritritol":          "erythritol sweetener crystals natural",
   "acucar-coco":        "coconut sugar natural brown sweetener",
@@ -45,7 +45,7 @@ const PRODUCT_QUERIES = {
   "tamara":             "dates fruit dried sweet natural",
   "goji-berry":         "goji berries red dried superfood",
   "canela":             "cinnamon sticks powder spice warm",
-  "levedura-nutricional":"nutritional yeast flakes golden bowl",
+  "levedura-nutricional":"nutritional yeast golden flakes healthy",
   "gergelim":           "sesame seeds white black healthy food",
   "ginkobiloba":        "ginkgo biloba green leaf herb",
   "farinha-grao-bico":  "chickpea flour healthy gluten free powder",
@@ -755,7 +755,7 @@ const CHAS_OBJETIVOS = [
   },
   {
     id: "cha-sono", nome: "Sono", icon: "ti-moon", cor: "#1A3A6B", bg: "#EBF5FB",
-    imgQuery: "sleep calm night lavender herbal tea bedroom",
+    imgQuery: "chamomile tea sleep herbal night calm",
     dica: "Mulungu + Valeriana é a combinação mais potente para insônia. Tome 1 hora antes de dormir. Evite telas após o chá.",
     chas: [
       { nome: "Mulungu", destaque: true, acao: "Sedativo natural potente", motivo: "O mais eficaz para insônia entre os chás brasileiros. Alcaloides eritrinicos reduzem a excitação neuronal e facilitam o início e manutenção do sono.", comoUsar: "1 colher de chá da casca em 200ml, 1 hora antes de dormir. Máximo 2x ao dia." },
