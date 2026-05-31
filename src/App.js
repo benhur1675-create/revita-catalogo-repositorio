@@ -291,185 +291,7 @@ const PRODUCTS = [
     combinacoes:[
       {produto:"Gengibre em Pó",motivo:"Sinergia termogênica — ambos aumentam a termogênese por mecanismos distintos.",script:"Para emagrecer com saúde, essa combinação acelera o metabolismo."},
       {produto:"Acerola em Pó",motivo:"Vitamina C aumenta absorção das catequinas em até 13x. Fato comprovado pela Universidade de Purdue.",script:"Sempre colocar limão ou acerola no chá verde — multiplica o efeito antioxidante."},
-      {produto:"Óleo de Coco Extravirgem",motivo:"Base do matcha latte funcional — MCT + L-teanina = energia e foco prolongados.",script:"Para começar o dia com foco máximo, essa é a combinação."}]}
-];
-
-const CATEGORIAS = ["Todos","Sementes","Farinhas","Superalimentos","Oleaginosas","Especiarias","Fibras","Suplementos","Óleos","Cereais","Chás","Adoçantes","Frutas Secas"];
-
-const OBJETIVOS = [
-  {
-    id: "emagrecer", imgQuery: "weight loss healthy food diet salad",
-    nome: "Emagrecer",
-    icon: "ti-flame",
-    cor: "#D35400",
-    bg: "#FEF5E7",
-    descricao: "Combinação de produtos que controlam o apetite, aceleram o metabolismo e reduzem a absorção de gordura.",
-    dica: "Use Psyllium + Chia 30 min antes das refeições com bastante água para saciedade máxima. Tome Chá Verde antes do treino.",
-    produtos: [
-      { id: "psyllium", papel: "⭐ Principal", motivo: "Fibra solúvel que forma gel no estômago, prolongando a saciedade e reduzindo a absorção de gordura e colesterol." },
-      { id: "chia", papel: "⭐ Principal", motivo: "Controla o índice glicêmico e evita picos de insulina que favorecem o acúmulo de gordura." },
-      { id: "farinha-banana-verde", papel: "Potencializador", motivo: "Amido resistente que alimenta a microbiota e melhora a sensibilidade à insulina — chave para emagrecer." },
-      { id: "cha-verde", papel: "Termogênico", motivo: "Acelera o metabolismo em até 5% e aumenta a oxidação de gordura, especialmente combinado com exercício." },
-      { id: "gengibre", papel: "Termogênico", motivo: "Ativa receptores de calor no corpo, aumentando a termogênese e auxiliando na queima calórica." },
-      { id: "farinha-coco", papel: "Substituto Low Carb", motivo: "Alto teor de fibra e baixíssimo índice glicêmico — ideal para substituir farinhas refinadas nas receitas." },
-      { id: "curcuma", papel: "Anti-inflamatório", motivo: "Inflamação crônica é um dos maiores bloqueadores do emagrecimento. A cúrcuma combate isso na raiz." }
-    ]
-  },
-  {
-    id: "menopausa", imgQuery: "woman wellness health natural herbs",
-    nome: "Menopausa",
-    icon: "ti-heart",
-    cor: "#8B4A6B",
-    bg: "#F5EEF8",
-    descricao: "Produtos com fitoestrógenos e anti-inflamatórios que ajudam a reduzir os sintomas do climatério.",
-    dica: "Linhaça é o produto mais indicado — use moída todo dia. Combine com Chia para potencializar o efeito anti-inflamatório.",
-    produtos: [
-      { id: "linhaca", papel: "⭐ Principal", motivo: "As lignanas da linhaça são fitoestrógenos naturais que modulam os receptores hormonais, reduzindo ondas de calor e ressecamento." },
-      { id: "chia", papel: "⭐ Principal", motivo: "Ômega-3 anti-inflamatório que protege o coração — risco que aumenta após a menopausa." },
-      { id: "colageno", papel: "Essencial", motivo: "A queda de estrogênio acelera a perda de colágeno na pele, articulações e ossos. Reposição diária é fundamental." },
-      { id: "acerola", papel: "Potencializador", motivo: "Vitamina C é cofator indispensável para síntese de colágeno. Usar sempre junto." },
-      { id: "mix-sementes", papel: "Suporte", motivo: "Zinco e selênio são minerais essenciais para o equilíbrio hormonal e proteção antioxidante." },
-      { id: "curcuma", papel: "Anti-inflamatório", motivo: "Reduz a inflamação sistêmica e protege as articulações, mais vulneráveis após a menopausa." },
-      { id: "spirulina", papel: "Energia", motivo: "Combate a fadiga e falta de disposição — sintomas comuns do climatério — com proteína completa e ferro." }
-    ]
-  },
-  {
-    id: "intestino-preso", imgQuery: "healthy gut fiber food vegetables",
-    nome: "Intestino Preso",
-    icon: "ti-activity",
-    cor: "#3B6B2E",
-    bg: "#E8F5E9",
-    descricao: "Combinação de fibras solúveis e prebióticos que regulam o trânsito intestinal de forma natural.",
-    dica: "Psyllium + água é a combinação mais eficaz. Beba no mínimo 2L de água ao dia para as fibras funcionarem corretamente.",
-    produtos: [
-      { id: "psyllium", papel: "⭐ Principal", motivo: "A mucilagem do psyllium regula o intestino em ambos os sentidos: trata constipação e diarreia. O mais eficaz para intestino preso." },
-      { id: "farinha-banana-verde", papel: "⭐ Principal", motivo: "Prebiótico que alimenta bactérias benéficas e produz butirato, fortalecendo a mucosa intestinal." },
-      { id: "chia", papel: "Potencializador", motivo: "Gel de chia hidrata as fezes e facilita o trânsito intestinal. Hidratar antes de consumir." },
-      { id: "linhaca", papel: "Potencializador", motivo: "Fibra solúvel que complementa o psyllium e lubrifica o intestino." },
-      { id: "farinha-aveia", papel: "Suporte", motivo: "Beta-glucana tem efeito prebiótico, alimentando bifidobactérias benéficas." },
-      { id: "gengibre", papel: "Digestivo", motivo: "Estimula a motilidade gástrica e a produção de enzimas digestivas, acelerando o trânsito." }
-    ]
-  },
-  {
-    id: "pre-treino", imgQuery: "workout fitness natural energy sport",
-    nome: "Pré-treino Natural",
-    icon: "ti-bolt",
-    cor: "#1A5C8B",
-    bg: "#EBF5FB",
-    descricao: "Energia, foco e vasodilatação natural sem estimulantes artificiais ou efeitos colaterais.",
-    dica: "Tome Farinha de Beterraba + Chá Verde 30-60 min antes do treino. Adicione Pasta de Amendoim para proteína e energia sustentada.",
-    produtos: [
-      { id: "farinha-beterraba", papel: "⭐ Principal", motivo: "Nitratos que viram óxido nítrico, dilatando os vasos e aumentando o fluxo de sangue e oxigênio para os músculos." },
-      { id: "cha-verde", papel: "⭐ Foco e Energia", motivo: "L-teanina + cafeína = energia limpa, foco e resistência sem ansiedade nem crash depois." },
-      { id: "pasta-amendoim", papel: "Combustível", motivo: "Proteína + gordura boa = energia estável e prolongada durante o treino, sem picos de insulina." },
-      { id: "oleo-coco", papel: "Energia Rápida", motivo: "TCMs viram cetonas imediatamente, fornecendo energia ao cérebro e músculos em minutos." },
-      { id: "spirulina", papel: "Proteína", motivo: "Proteína completa de alta digestibilidade para recuperação muscular. Rico em ferro para transporte de oxigênio." },
-      { id: "acerola", papel: "Recuperação", motivo: "Vitamina C reduz o estresse oxidativo causado pelo exercício e acelera a recuperação." },
-      { id: "gengibre", papel: "Anti-inflamatório", motivo: "Reduz a inflamação muscular pós-treino e melhora a circulação." }
-    ]
-  },
-  {
-    id: "disposicao", imgQuery: "energy vitality morning healthy lifestyle",
-    nome: "Disposição e Energia",
-    icon: "ti-sun",
-    cor: "#8B6B1A",
-    bg: "#FEFDE7",
-    descricao: "Produtos que combatem o cansaço, aumentam a energia celular e melhoram a vitalidade.",
-    dica: "Spirulina + Acerola em Pó de manhã é a combinação mais poderosa para energia. A vitamina C triplica a absorção do ferro.",
-    produtos: [
-      { id: "spirulina", papel: "⭐ Principal", motivo: "Ferro + B12 + proteína completa = energia celular real. Combate anemia funcional, principal causa de cansaço." },
-      { id: "acerola", papel: "⭐ Potencializador", motivo: "Vitamina C aumenta a absorção do ferro da spirulina em até 3x. Usar sempre junto." },
-      { id: "moringa", papel: "Multivitamínico", motivo: "17x mais cálcio que leite, 15x mais potássio que banana. Multivitamínico natural completo para energia." },
-      { id: "farinha-beterraba", papel: "Circulação", motivo: "Melhora o fluxo sanguíneo e a oxigenação dos tecidos — fundamental para disposição." },
-      { id: "oleo-coco", papel: "Energia Rápida", motivo: "TCMs fornecem energia imediata ao cérebro sem depender de insulina — ideal para manhãs lentas." },
-      { id: "cacau", papel: "Humor e Energia", motivo: "Magnésio + feniletilamina + endorfinas = energia e bom humor naturais, sem o crash do café." }
-    ]
-  },
-  {
-    id: "foco", imgQuery: "focus mental clarity meditation calm mind",
-    nome: "Foco e Clareza Mental",
-    icon: "ti-brain",
-    cor: "#5B2C6F",
-    bg: "#F5EEF8",
-    descricao: "Combinação de neuronutrientes que melhoram a cognição, memória e concentração.",
-    dica: "Chá Verde Matcha + Óleo de Coco é o 'bulletproof' natural — L-teanina + TCM = foco e calma ao mesmo tempo.",
-    produtos: [
-      { id: "cha-verde", papel: "⭐ Principal", motivo: "L-teanina atravessa a barreira hematoencefálica e potencializa a cafeína gerando foco sem ansiedade. Único aminoácido com esse efeito." },
-      { id: "oleo-coco", papel: "⭐ Combustível Cerebral", motivo: "TCMs viram cetonas — combustível preferido do cérebro, mais eficiente que glicose para cognição e clareza." },
-      { id: "cacau", papel: "Neuroprotetor", motivo: "Flavonoides do cacau aumentam o fluxo sanguíneo cerebral e estimulam BDNF — fator de crescimento neuronal." },
-      { id: "spirulina", papel: "Nutrição Neuronal", motivo: "Vitamina B12 e ferro são essenciais para o funcionamento do sistema nervoso. Deficiência causa névoa mental." },
-      { id: "pasta-amendoim", papel: "Energia Estável", motivo: "Proteína + gordura = glicemia estável. Picos e quedas de açúcar são os principais causadores de falta de foco." },
-      { id: "moringa", papel: "Suporte", motivo: "Rico em triptofano, precursor de serotonina — fundamental para humor e concentração." }
-    ]
-  },
-  {
-    id: "pele-beleza", imgQuery: "skin beauty natural glow woman healthy",
-    nome: "Pele e Beleza",
-    icon: "ti-sparkles",
-    cor: "#8B2E4A",
-    bg: "#FDEDEC",
-    descricao: "Nutrição de dentro para fora — colágeno, antioxidantes e vitaminas para pele, cabelo e unhas.",
-    dica: "Colágeno + Acerola é a dupla obrigatória. Sem vitamina C, o colágeno não é sintetizado corretamente pelo organismo.",
-    produtos: [
-      { id: "colageno", papel: "⭐ Principal", motivo: "Estimula a síntese endógena de colágeno nos fibroblastos. Melhora elasticidade, firmeza e reduz rugas." },
-      { id: "acerola", papel: "⭐ Indispensável", motivo: "Cofator enzimático obrigatório para síntese de colágeno. Sem ela, o suplemento perde grande parte do efeito." },
-      { id: "spirulina", papel: "Antioxidante", motivo: "Ficocianina — um dos antioxidantes mais potentes — protege as células da pele do envelhecimento oxidativo." },
-      { id: "mix-sementes", papel: "Minerais da Beleza", motivo: "Zinco (cicatrização e renovação celular) + vitamina E (proteção da membrana lipídica da pele)." },
-      { id: "moringa", papel: "Vitaminas", motivo: "Vitaminas A, C e E em alta concentração — a tríade antioxidante da beleza e saúde da pele." },
-      { id: "linhaca", papel: "Hidratação", motivo: "Ômega-3 e lignanas mantêm a barreira lipídica da pele hidratada e protegida, reduzindo ressecamento." }
-    ]
-  },
-  {
-    id: "imunidade", imgQuery: "immune system natural herbs vitamin healthy",
-    nome: "Imunidade",
-    icon: "ti-shield",
-    cor: "#1A5C38",
-    bg: "#E8F5E9",
-    descricao: "Produtos imunomoduladores que fortalecem as defesas naturais do organismo.",
-    dica: "Em períodos de gripe e resfriado, dobre a dose de Acerola e adicione Gengibre fresco ao chá. A combinação é mais eficaz que suplementos sintéticos.",
-    produtos: [
-      { id: "acerola", papel: "⭐ Principal", motivo: "30x mais vitamina C que laranja. Estimula a produção de leucócitos e tem ação antiviral comprovada." },
-      { id: "gengibre", papel: "⭐ Antiviral", motivo: "Gingeróis têm ação antiviral e antibacteriana direta, além de anti-inflamatório potente." },
-      { id: "spirulina", papel: "Imunoprotetor", motivo: "Ficocianina estimula a produção de células NK (Natural Killer) — primeira linha de defesa imunológica." },
-      { id: "moringa", papel: "Multivitamínico", motivo: "Rico em vitaminas A, C, E e zinco — todos essenciais para o funcionamento do sistema imune." },
-      { id: "curcuma", papel: "Anti-inflamatório", motivo: "Reduz a inflamação crônica que enfraquece o sistema imune. Usar com pimenta preta para máxima absorção." },
-      { id: "mix-sementes", papel: "Minerais", motivo: "Selênio e zinco são cofatores enzimáticos do sistema imune. Deficiência desses minerais = imunidade baixa." }
-    ]
-  },
-  {
-    id: "anti-inflamatorio", imgQuery: "turmeric ginger anti inflammatory spices",
-    nome: "Anti-inflamatório",
-    icon: "ti-leaf",
-    cor: "#4A6B5C",
-    bg: "#E8F5E9",
-    descricao: "A inflamação crônica é a raiz de doenças cardíacas, diabetes, artrite e envelhecimento acelerado.",
-    dica: "Cúrcuma + Pimenta Preta é a combinação mais potente do mundo natural. A piperina aumenta a absorção da curcumina em 2.000%.",
-    produtos: [
-      { id: "curcuma", papel: "⭐ O mais potente", motivo: "Curcumina inibe diretamente NF-kB e COX-2 — as principais vias inflamatórias. SEMPRE com pimenta preta." },
-      { id: "gengibre", papel: "⭐ Sinergia total", motivo: "Gingeróis inibem COX-2 da mesma forma que a curcumina. Juntos são mais eficazes que separados." },
-      { id: "chia", papel: "Ômega-3", motivo: "ALA precursor de EPA/DHA, com ação anti-inflamatória sistêmica. Combate inflamação de dentro das células." },
-      { id: "linhaca", papel: "Ômega-3", motivo: "Lignanas antioxidantes + ômega-3 para inflamação hormonal e cardiovascular." },
-      { id: "cacau", papel: "Flavonoides", motivo: "Epicatequina reduz PCR (proteína C-reativa) — marcador de inflamação sistêmica." },
-      { id: "oleo-coco", papel: "Absorção", motivo: "Gordura boa que aumenta a absorção da curcumina e tem ação antimicrobiana anti-inflamatória." }
-    ]
-  },
-  {
-    id: "colesterol", imgQuery: "heart health oats fiber healthy food",
-    nome: "Colesterol",
-    icon: "ti-heart-rate-monitor",
-    cor: "#C0392B",
-    bg: "#FDEDEC",
-    descricao: "Fibras solúveis e gorduras boas que reduzem o LDL e protegem a saúde cardiovascular.",
-    dica: "Psyllium + Aveia todo dia é a combinação com maior evidência científica para redução de colesterol LDL.",
-    produtos: [
-      { id: "psyllium", papel: "⭐ Principal", motivo: "Mucilagem sequestra ácidos biliares no intestino, forçando o fígado a usar colesterol para produzir mais bile." },
-      { id: "farinha-aveia", papel: "⭐ Beta-glucana", motivo: "Beta-glucana forma gel que absorve colesterol LDL no intestino. Evidência nível A da FDA americana." },
-      { id: "chia", papel: "Ômega-3", motivo: "Reduz triglicerídeos e aumenta HDL (colesterol bom). Ação complementar às fibras solúveis." },
-      { id: "linhaca", papel: "Ômega-3", motivo: "Lignanas reduzem a oxidação do LDL — o LDL oxidado é o verdadeiramente perigoso para o coração." },
-      { id: "oleo-coco", papel: "HDL", motivo: "Ácido láurico aumenta o colesterol HDL (protetor), melhorando a razão LDL/HDL." },
-      { id: "curcuma", papel: "Proteção", motivo: "Curcumina reduz a oxidação do LDL e a inflamação vascular — fatores-chave da aterosclerose." }
-    ]
-  }  ,
+      {produto:"Óleo de Coco Extravirgem",motivo:"Base do matcha latte funcional — MCT + L-teanina = energia e foco prolongados.",script:"Para começar o dia com foco máximo, essa é a combinação."}]}  ,
   {
     id: "whey-protein", nome: "Whey Protein Concentrado", categoria: "Suplementos", icon: "ti-barbell", cor: "#2E4A8B",
     descricao: "Proteína de alto valor biológico derivada do soro do leite. A mais estudada e eficaz para ganho muscular e recuperação.",
@@ -715,6 +537,184 @@ const OBJETIVOS = [
       { produto: "Açaí em Pó", motivo: "Combinação amazônica clássica — energia do guaraná + antioxidante do açaí. O blend do Brasil.", script: "Guaraná com açaí — o blend 100% amazônico de energia e antioxidante." },
       { produto: "Maca Peruana", motivo: "Energia imediata do guaraná + energia adaptógena da maca = performance física e mental completa.", script: "Guaraná com maca — energia agora e resistência ao longo do dia." },
       { produto: "Chia", motivo: "Fibra e ômega-3 da chia retardam ainda mais a absorção das xantinas do guaraná, prolongando o efeito.", script: "Guaraná com chia — energia ainda mais gradual e sustentada." }
+    ]
+  }
+];
+
+const CATEGORIAS = ["Todos","Sementes","Farinhas","Superalimentos","Oleaginosas","Especiarias","Fibras","Suplementos","Óleos","Cereais","Chás","Adoçantes","Frutas Secas"];
+
+const OBJETIVOS = [
+  {
+    id: "emagrecer", imgQuery: "weight loss healthy food diet salad",
+    nome: "Emagrecer",
+    icon: "ti-flame",
+    cor: "#D35400",
+    bg: "#FEF5E7",
+    descricao: "Combinação de produtos que controlam o apetite, aceleram o metabolismo e reduzem a absorção de gordura.",
+    dica: "Use Psyllium + Chia 30 min antes das refeições com bastante água para saciedade máxima. Tome Chá Verde antes do treino.",
+    produtos: [
+      { id: "psyllium", papel: "⭐ Principal", motivo: "Fibra solúvel que forma gel no estômago, prolongando a saciedade e reduzindo a absorção de gordura e colesterol." },
+      { id: "chia", papel: "⭐ Principal", motivo: "Controla o índice glicêmico e evita picos de insulina que favorecem o acúmulo de gordura." },
+      { id: "farinha-banana-verde", papel: "Potencializador", motivo: "Amido resistente que alimenta a microbiota e melhora a sensibilidade à insulina — chave para emagrecer." },
+      { id: "cha-verde", papel: "Termogênico", motivo: "Acelera o metabolismo em até 5% e aumenta a oxidação de gordura, especialmente combinado com exercício." },
+      { id: "gengibre", papel: "Termogênico", motivo: "Ativa receptores de calor no corpo, aumentando a termogênese e auxiliando na queima calórica." },
+      { id: "farinha-coco", papel: "Substituto Low Carb", motivo: "Alto teor de fibra e baixíssimo índice glicêmico — ideal para substituir farinhas refinadas nas receitas." },
+      { id: "curcuma", papel: "Anti-inflamatório", motivo: "Inflamação crônica é um dos maiores bloqueadores do emagrecimento. A cúrcuma combate isso na raiz." }
+    ]
+  },
+  {
+    id: "menopausa", imgQuery: "woman wellness health natural herbs",
+    nome: "Menopausa",
+    icon: "ti-heart",
+    cor: "#8B4A6B",
+    bg: "#F5EEF8",
+    descricao: "Produtos com fitoestrógenos e anti-inflamatórios que ajudam a reduzir os sintomas do climatério.",
+    dica: "Linhaça é o produto mais indicado — use moída todo dia. Combine com Chia para potencializar o efeito anti-inflamatório.",
+    produtos: [
+      { id: "linhaca", papel: "⭐ Principal", motivo: "As lignanas da linhaça são fitoestrógenos naturais que modulam os receptores hormonais, reduzindo ondas de calor e ressecamento." },
+      { id: "chia", papel: "⭐ Principal", motivo: "Ômega-3 anti-inflamatório que protege o coração — risco que aumenta após a menopausa." },
+      { id: "colageno", papel: "Essencial", motivo: "A queda de estrogênio acelera a perda de colágeno na pele, articulações e ossos. Reposição diária é fundamental." },
+      { id: "acerola", papel: "Potencializador", motivo: "Vitamina C é cofator indispensável para síntese de colágeno. Usar sempre junto." },
+      { id: "mix-sementes", papel: "Suporte", motivo: "Zinco e selênio são minerais essenciais para o equilíbrio hormonal e proteção antioxidante." },
+      { id: "curcuma", papel: "Anti-inflamatório", motivo: "Reduz a inflamação sistêmica e protege as articulações, mais vulneráveis após a menopausa." },
+      { id: "spirulina", papel: "Energia", motivo: "Combate a fadiga e falta de disposição — sintomas comuns do climatério — com proteína completa e ferro." }
+    ]
+  },
+  {
+    id: "intestino-preso", imgQuery: "healthy gut fiber food vegetables",
+    nome: "Intestino Preso",
+    icon: "ti-activity",
+    cor: "#3B6B2E",
+    bg: "#E8F5E9",
+    descricao: "Combinação de fibras solúveis e prebióticos que regulam o trânsito intestinal de forma natural.",
+    dica: "Psyllium + água é a combinação mais eficaz. Beba no mínimo 2L de água ao dia para as fibras funcionarem corretamente.",
+    produtos: [
+      { id: "psyllium", papel: "⭐ Principal", motivo: "A mucilagem do psyllium regula o intestino em ambos os sentidos: trata constipação e diarreia. O mais eficaz para intestino preso." },
+      { id: "farinha-banana-verde", papel: "⭐ Principal", motivo: "Prebiótico que alimenta bactérias benéficas e produz butirato, fortalecendo a mucosa intestinal." },
+      { id: "chia", papel: "Potencializador", motivo: "Gel de chia hidrata as fezes e facilita o trânsito intestinal. Hidratar antes de consumir." },
+      { id: "linhaca", papel: "Potencializador", motivo: "Fibra solúvel que complementa o psyllium e lubrifica o intestino." },
+      { id: "farinha-aveia", papel: "Suporte", motivo: "Beta-glucana tem efeito prebiótico, alimentando bifidobactérias benéficas." },
+      { id: "gengibre", papel: "Digestivo", motivo: "Estimula a motilidade gástrica e a produção de enzimas digestivas, acelerando o trânsito." }
+    ]
+  },
+  {
+    id: "pre-treino", imgQuery: "workout fitness natural energy sport",
+    nome: "Pré-treino Natural",
+    icon: "ti-bolt",
+    cor: "#1A5C8B",
+    bg: "#EBF5FB",
+    descricao: "Energia, foco e vasodilatação natural sem estimulantes artificiais ou efeitos colaterais.",
+    dica: "Tome Farinha de Beterraba + Chá Verde 30-60 min antes do treino. Adicione Pasta de Amendoim para proteína e energia sustentada.",
+    produtos: [
+      { id: "farinha-beterraba", papel: "⭐ Principal", motivo: "Nitratos que viram óxido nítrico, dilatando os vasos e aumentando o fluxo de sangue e oxigênio para os músculos." },
+      { id: "cha-verde", papel: "⭐ Foco e Energia", motivo: "L-teanina + cafeína = energia limpa, foco e resistência sem ansiedade nem crash depois." },
+      { id: "pasta-amendoim", papel: "Combustível", motivo: "Proteína + gordura boa = energia estável e prolongada durante o treino, sem picos de insulina." },
+      { id: "oleo-coco", papel: "Energia Rápida", motivo: "TCMs viram cetonas imediatamente, fornecendo energia ao cérebro e músculos em minutos." },
+      { id: "spirulina", papel: "Proteína", motivo: "Proteína completa de alta digestibilidade para recuperação muscular. Rico em ferro para transporte de oxigênio." },
+      { id: "acerola", papel: "Recuperação", motivo: "Vitamina C reduz o estresse oxidativo causado pelo exercício e acelera a recuperação." },
+      { id: "gengibre", papel: "Anti-inflamatório", motivo: "Reduz a inflamação muscular pós-treino e melhora a circulação." }
+    ]
+  },
+  {
+    id: "disposicao", imgQuery: "energy vitality morning healthy lifestyle",
+    nome: "Disposição e Energia",
+    icon: "ti-sun",
+    cor: "#8B6B1A",
+    bg: "#FEFDE7",
+    descricao: "Produtos que combatem o cansaço, aumentam a energia celular e melhoram a vitalidade.",
+    dica: "Spirulina + Acerola em Pó de manhã é a combinação mais poderosa para energia. A vitamina C triplica a absorção do ferro.",
+    produtos: [
+      { id: "spirulina", papel: "⭐ Principal", motivo: "Ferro + B12 + proteína completa = energia celular real. Combate anemia funcional, principal causa de cansaço." },
+      { id: "acerola", papel: "⭐ Potencializador", motivo: "Vitamina C aumenta a absorção do ferro da spirulina em até 3x. Usar sempre junto." },
+      { id: "moringa", papel: "Multivitamínico", motivo: "17x mais cálcio que leite, 15x mais potássio que banana. Multivitamínico natural completo para energia." },
+      { id: "farinha-beterraba", papel: "Circulação", motivo: "Melhora o fluxo sanguíneo e a oxigenação dos tecidos — fundamental para disposição." },
+      { id: "oleo-coco", papel: "Energia Rápida", motivo: "TCMs fornecem energia imediata ao cérebro sem depender de insulina — ideal para manhãs lentas." },
+      { id: "cacau", papel: "Humor e Energia", motivo: "Magnésio + feniletilamina + endorfinas = energia e bom humor naturais, sem o crash do café." }
+    ]
+  },
+  {
+    id: "foco", imgQuery: "focus mental clarity meditation calm mind",
+    nome: "Foco e Clareza Mental",
+    icon: "ti-brain",
+    cor: "#5B2C6F",
+    bg: "#F5EEF8",
+    descricao: "Combinação de neuronutrientes que melhoram a cognição, memória e concentração.",
+    dica: "Chá Verde Matcha + Óleo de Coco é o 'bulletproof' natural — L-teanina + TCM = foco e calma ao mesmo tempo.",
+    produtos: [
+      { id: "cha-verde", papel: "⭐ Principal", motivo: "L-teanina atravessa a barreira hematoencefálica e potencializa a cafeína gerando foco sem ansiedade. Único aminoácido com esse efeito." },
+      { id: "oleo-coco", papel: "⭐ Combustível Cerebral", motivo: "TCMs viram cetonas — combustível preferido do cérebro, mais eficiente que glicose para cognição e clareza." },
+      { id: "cacau", papel: "Neuroprotetor", motivo: "Flavonoides do cacau aumentam o fluxo sanguíneo cerebral e estimulam BDNF — fator de crescimento neuronal." },
+      { id: "spirulina", papel: "Nutrição Neuronal", motivo: "Vitamina B12 e ferro são essenciais para o funcionamento do sistema nervoso. Deficiência causa névoa mental." },
+      { id: "pasta-amendoim", papel: "Energia Estável", motivo: "Proteína + gordura = glicemia estável. Picos e quedas de açúcar são os principais causadores de falta de foco." },
+      { id: "moringa", papel: "Suporte", motivo: "Rico em triptofano, precursor de serotonina — fundamental para humor e concentração." }
+    ]
+  },
+  {
+    id: "pele-beleza", imgQuery: "skin beauty natural glow woman healthy",
+    nome: "Pele e Beleza",
+    icon: "ti-sparkles",
+    cor: "#8B2E4A",
+    bg: "#FDEDEC",
+    descricao: "Nutrição de dentro para fora — colágeno, antioxidantes e vitaminas para pele, cabelo e unhas.",
+    dica: "Colágeno + Acerola é a dupla obrigatória. Sem vitamina C, o colágeno não é sintetizado corretamente pelo organismo.",
+    produtos: [
+      { id: "colageno", papel: "⭐ Principal", motivo: "Estimula a síntese endógena de colágeno nos fibroblastos. Melhora elasticidade, firmeza e reduz rugas." },
+      { id: "acerola", papel: "⭐ Indispensável", motivo: "Cofator enzimático obrigatório para síntese de colágeno. Sem ela, o suplemento perde grande parte do efeito." },
+      { id: "spirulina", papel: "Antioxidante", motivo: "Ficocianina — um dos antioxidantes mais potentes — protege as células da pele do envelhecimento oxidativo." },
+      { id: "mix-sementes", papel: "Minerais da Beleza", motivo: "Zinco (cicatrização e renovação celular) + vitamina E (proteção da membrana lipídica da pele)." },
+      { id: "moringa", papel: "Vitaminas", motivo: "Vitaminas A, C e E em alta concentração — a tríade antioxidante da beleza e saúde da pele." },
+      { id: "linhaca", papel: "Hidratação", motivo: "Ômega-3 e lignanas mantêm a barreira lipídica da pele hidratada e protegida, reduzindo ressecamento." }
+    ]
+  },
+  {
+    id: "imunidade", imgQuery: "immune system natural herbs vitamin healthy",
+    nome: "Imunidade",
+    icon: "ti-shield",
+    cor: "#1A5C38",
+    bg: "#E8F5E9",
+    descricao: "Produtos imunomoduladores que fortalecem as defesas naturais do organismo.",
+    dica: "Em períodos de gripe e resfriado, dobre a dose de Acerola e adicione Gengibre fresco ao chá. A combinação é mais eficaz que suplementos sintéticos.",
+    produtos: [
+      { id: "acerola", papel: "⭐ Principal", motivo: "30x mais vitamina C que laranja. Estimula a produção de leucócitos e tem ação antiviral comprovada." },
+      { id: "gengibre", papel: "⭐ Antiviral", motivo: "Gingeróis têm ação antiviral e antibacteriana direta, além de anti-inflamatório potente." },
+      { id: "spirulina", papel: "Imunoprotetor", motivo: "Ficocianina estimula a produção de células NK (Natural Killer) — primeira linha de defesa imunológica." },
+      { id: "moringa", papel: "Multivitamínico", motivo: "Rico em vitaminas A, C, E e zinco — todos essenciais para o funcionamento do sistema imune." },
+      { id: "curcuma", papel: "Anti-inflamatório", motivo: "Reduz a inflamação crônica que enfraquece o sistema imune. Usar com pimenta preta para máxima absorção." },
+      { id: "mix-sementes", papel: "Minerais", motivo: "Selênio e zinco são cofatores enzimáticos do sistema imune. Deficiência desses minerais = imunidade baixa." }
+    ]
+  },
+  {
+    id: "anti-inflamatorio", imgQuery: "turmeric ginger anti inflammatory spices",
+    nome: "Anti-inflamatório",
+    icon: "ti-leaf",
+    cor: "#4A6B5C",
+    bg: "#E8F5E9",
+    descricao: "A inflamação crônica é a raiz de doenças cardíacas, diabetes, artrite e envelhecimento acelerado.",
+    dica: "Cúrcuma + Pimenta Preta é a combinação mais potente do mundo natural. A piperina aumenta a absorção da curcumina em 2.000%.",
+    produtos: [
+      { id: "curcuma", papel: "⭐ O mais potente", motivo: "Curcumina inibe diretamente NF-kB e COX-2 — as principais vias inflamatórias. SEMPRE com pimenta preta." },
+      { id: "gengibre", papel: "⭐ Sinergia total", motivo: "Gingeróis inibem COX-2 da mesma forma que a curcumina. Juntos são mais eficazes que separados." },
+      { id: "chia", papel: "Ômega-3", motivo: "ALA precursor de EPA/DHA, com ação anti-inflamatória sistêmica. Combate inflamação de dentro das células." },
+      { id: "linhaca", papel: "Ômega-3", motivo: "Lignanas antioxidantes + ômega-3 para inflamação hormonal e cardiovascular." },
+      { id: "cacau", papel: "Flavonoides", motivo: "Epicatequina reduz PCR (proteína C-reativa) — marcador de inflamação sistêmica." },
+      { id: "oleo-coco", papel: "Absorção", motivo: "Gordura boa que aumenta a absorção da curcumina e tem ação antimicrobiana anti-inflamatória." }
+    ]
+  },
+  {
+    id: "colesterol", imgQuery: "heart health oats fiber healthy food",
+    nome: "Colesterol",
+    icon: "ti-heart-rate-monitor",
+    cor: "#C0392B",
+    bg: "#FDEDEC",
+    descricao: "Fibras solúveis e gorduras boas que reduzem o LDL e protegem a saúde cardiovascular.",
+    dica: "Psyllium + Aveia todo dia é a combinação com maior evidência científica para redução de colesterol LDL.",
+    produtos: [
+      { id: "psyllium", papel: "⭐ Principal", motivo: "Mucilagem sequestra ácidos biliares no intestino, forçando o fígado a usar colesterol para produzir mais bile." },
+      { id: "farinha-aveia", papel: "⭐ Beta-glucana", motivo: "Beta-glucana forma gel que absorve colesterol LDL no intestino. Evidência nível A da FDA americana." },
+      { id: "chia", papel: "Ômega-3", motivo: "Reduz triglicerídeos e aumenta HDL (colesterol bom). Ação complementar às fibras solúveis." },
+      { id: "linhaca", papel: "Ômega-3", motivo: "Lignanas reduzem a oxidação do LDL — o LDL oxidado é o verdadeiramente perigoso para o coração." },
+      { id: "oleo-coco", papel: "HDL", motivo: "Ácido láurico aumenta o colesterol HDL (protetor), melhorando a razão LDL/HDL." },
+      { id: "curcuma", papel: "Proteção", motivo: "Curcumina reduz a oxidação do LDL e a inflamação vascular — fatores-chave da aterosclerose." }
     ]
   }
 ];
