@@ -294,7 +294,7 @@ const PRODUCTS = [
       {produto:"Óleo de Coco Extravirgem",motivo:"Base do matcha latte funcional — MCT + L-teanina = energia e foco prolongados.",script:"Para começar o dia com foco máximo, essa é a combinação."}]}
 ];
 
-const CATEGORIAS = ["Todos","Sementes","Farinhas","Superalimentos","Oleaginosas","Especiarias","Fibras","Suplementos","Óleos","Cereais","Chás"];
+const CATEGORIAS = ["Todos","Sementes","Farinhas","Superalimentos","Oleaginosas","Especiarias","Fibras","Suplementos","Óleos","Cereais","Chás","Adoçantes","Frutas Secas"];
 
 const OBJETIVOS = [
   {
@@ -468,6 +468,253 @@ const OBJETIVOS = [
       { id: "linhaca", papel: "Ômega-3", motivo: "Lignanas reduzem a oxidação do LDL — o LDL oxidado é o verdadeiramente perigoso para o coração." },
       { id: "oleo-coco", papel: "HDL", motivo: "Ácido láurico aumenta o colesterol HDL (protetor), melhorando a razão LDL/HDL." },
       { id: "curcuma", papel: "Proteção", motivo: "Curcumina reduz a oxidação do LDL e a inflamação vascular — fatores-chave da aterosclerose." }
+    ]
+  }  ,
+  {
+    id: "whey-protein", nome: "Whey Protein Concentrado", categoria: "Suplementos", icon: "ti-barbell", cor: "#2E4A8B",
+    descricao: "Proteína de alto valor biológico derivada do soro do leite. A mais estudada e eficaz para ganho muscular e recuperação.",
+    comoAge: "O whey protein concentrado fornece todos os aminoácidos essenciais com alta taxa de digestão e absorção. A leucina, aminoácido mais abundante, ativa diretamente a via mTOR — principal sinalizador de síntese proteica muscular. Pico de aminoacidemia em 60–90 min após o consumo, ideal para janela anabólica pós-treino.",
+    beneficios: ["Síntese e recuperação muscular acelerada","Saciedade superior a carboidratos e gorduras","Fortalecimento do sistema imune (imunoglobulinas)","Suporte para perda de gordura mantendo massa magra","Rico em BCAA e glutamina","Alto valor biológico — 104"],
+    diferenciais: ["100% whey concentrado sem maltodextrina ou adulterantes","Baixo teor de lactose — bem tolerado pela maioria","Testado para metais pesados e qualidade microbiológica"],
+    comoUsar: ["20 a 30g por dose (1 scoop)","Misturar em 200ml de água, leite ou leite vegetal","Consumir preferencialmente até 2h após o treino","Pode usar como refeição proteica em vitaminas e receitas"],
+    combinacoes: [
+      { produto: "Pasta de Amendoim Natural", motivo: "Proteína do whey + gordura boa + carboidrato da banana = refeição pós-treino completa com recuperação rápida.", script: "Whey com pasta de amendoim e banana — o shake pós-treino mais completo e saboroso." },
+      { produto: "Cacau em Pó 100%", motivo: "Magnésio do cacau apoia a recuperação muscular. Flavonoides reduzem o estresse oxidativo do exercício.", script: "Shake de whey com cacau — proteína e antioxidante em um só." },
+      { produto: "Acerola em Pó", motivo: "Vitamina C reduz o cortisol pós-exercício e acelera a recuperação muscular.", script: "Vitamina C potencializa a recuperação junto com o whey." }
+    ]
+  },
+  {
+    id: "maca-peruana", nome: "Maca Peruana", categoria: "Superalimentos", icon: "ti-bolt", cor: "#8B7A2E",
+    descricao: "Raiz adaptógena andina usada há milênios para energia, libido, fertilidade e equilíbrio hormonal.",
+    comoAge: "Os glucosinolatos e macamidas da maca atuam no hipotálamo e hipófise, modulando o eixo HPA sem interferir diretamente nos hormônios — por isso é considerada adaptógena. Aumenta a produção de energia celular (ATP) e melhora a resposta ao estresse oxidativo. A maca negra tem maior ação na cognição e resistência física.",
+    beneficios: ["Energia e resistência física sem estimulantes","Equilíbrio hormonal natural (homens e mulheres)","Melhora da libido — comprovado em estudos clínicos","Cognição e memória (especialmente maca negra)","Fertilidade masculina — aumenta concentração e motilidade espermática","Alívio de sintomas da menopausa"],
+    diferenciais: ["Maca gelatinizada — pré-cozida para melhor digestão e maior biodisponibilidade","Cultivada em altitude acima de 4.000m — maior concentração de ativos","Sem aditivos ou agentes de fluxo"],
+    comoUsar: ["5 a 10g ao dia (1 colher de chá)","Vitaminas, sucos, iogurte, café ou aveia","Começar com dose menor e aumentar em 2 semanas","Fazer ciclos: 3 meses de uso, 2 semanas de pausa"],
+    combinacoes: [
+      { produto: "Cacau em Pó 100%", motivo: "Combinação clássica de energia e bem-estar. Magnésio do cacau complementa a ação energética da maca.", script: "Maca com cacau — energia real e sustentada sem café." },
+      { produto: "Spirulina", motivo: "Dupla de superalimentos para energia, imunidade e performance. Perfis nutricionais altamente complementares.", script: "A combinação de performance mais completa da natureza." },
+      { produto: "Óleo de Coco Extravirgem", motivo: "TCMs fornecem energia imediata enquanto a maca oferece energia adaptógena de longo prazo.", script: "Energia agora e energia duradoura — a dupla ideal para quem treina." }
+    ]
+  },
+  {
+    id: "acai-po", nome: "Açaí em Pó", categoria: "Superalimentos", icon: "ti-berry", cor: "#4A1A6B",
+    descricao: "Um dos antioxidantes mais potentes do mundo. Rico em antocianinas, ômega-9 e fibras.",
+    comoAge: "As antocianinas do açaí neutralizam radicais livres com capacidade ORAC superior à maioria das frutas. O ácido oleico (ômega-9) melhora o perfil lipídico e tem ação anti-inflamatória. As antocianinas também atravessam a barreira hematoencefálica, protegendo neurônios e melhorando a cognição.",
+    beneficios: ["Antioxidante potentíssimo — ORAC elevadíssimo","Saúde cardiovascular — reduz LDL oxidado","Energia e disposição","Neuroprotetor — melhora memória e foco","Ação anti-inflamatória sistêmica","Rico em fibras para saúde intestinal"],
+    diferenciais: ["Liofilizado a frio — preserva 95% dos antioxidantes","Sem açúcar adicionado — açaí puro concentrado","Proveniente da Amazônia brasileira — produto nacional de qualidade"],
+    comoUsar: ["5 a 10g ao dia (1 a 2 colheres de chá)","Vitaminas, smoothies, iogurte ou tigela de açaí","Combina muito bem com banana e pasta de amendoim","Pode misturar com leite vegetal para bowl de açaí"],
+    combinacoes: [
+      { produto: "Granola Natural", motivo: "A base clássica do bowl de açaí funcional. Carboidrato complexo + antioxidante = energia e antienvelhecimento.", script: "Bowl de açaí com granola — o café da manhã mais antioxidante que existe." },
+      { produto: "Mix de Sementes", motivo: "Ômega-3 das sementes complementa o ômega-9 do açaí para proteção cardiovascular completa.", script: "Açaí com mix de sementes — a tigela anti-inflamatória perfeita." },
+      { produto: "Pasta de Amendoim Natural", motivo: "Gordura boa aumenta a absorção das antocianinas lipossolúveis do açaí em até 3x.", script: "Pasta de amendoim com açaí — a combinação que maximiza o efeito antioxidante." }
+    ]
+  },
+  {
+    id: "eritritol", nome: "Eritritol", categoria: "Adoçantes", icon: "ti-sugar", cor: "#2E6B8B",
+    descricao: "Adoçante natural zero caloria com índice glicêmico zero. O mais seguro e bem tolerado para diabéticos e dietas low carb.",
+    comoAge: "O eritritol é um poliol (álcool de açúcar) produzido por fermentação natural. Diferente de outros adoçantes, é absorvido no intestino delgado e excretado inalterado pelos rins — por isso não causa desconforto gastrointestinal. Tem poder adoçante de 70% em relação ao açúcar, com zero calorias e zero impacto na glicemia e insulina.",
+    beneficios: ["Zero calorias e zero índice glicêmico","Não causa cáries — inibe bactérias bucais","Bem tolerado — não causa gases ou desconforto intestinal","Seguro para diabéticos tipo 1 e tipo 2","Não altera a microbiota intestinal","Estável em altas temperaturas — ideal para assar"],
+    diferenciais: ["Origem natural por fermentação de fontes vegetais","Pureza cristalina — idêntico ao açúcar em textura","Sem aftertaste amargo — o mais próximo do açúcar de todos os adoçantes"],
+    comoUsar: ["Usar na proporção de 1,3:1 em relação ao açúcar (eritritol é 30% menos doce)","Receitas, café, chás, iogurte, vitaminas","Suporta temperaturas de até 200°C sem degradação","Pode combinar com stevia para intensificar o dulçor"],
+    combinacoes: [
+      { produto: "Cacau em Pó 100%", motivo: "A base do chocolate funcional caseiro sem açúcar. Eritritol adoça sem glicemia, cacau dá sabor e antioxidantes.", script: "Chocolate saudável de verdade — cacau com eritritol, sem culpa." },
+      { produto: "Farinha de Coco", motivo: "Dupla low carb perfeita para receitas cetogênicas. Ambos têm zero impacto glicêmico.", script: "Para quem faz low carb, essa é a combinação base de qualquer receita doce." },
+      { produto: "Acerola em Pó", motivo: "Vitamina C natural que pode ser adicionada junto em receitas para enriquecer nutricionalmente.", script: "Adoçante zero caloria mais vitamina C natural — a combinação mais inteligente." }
+    ]
+  },
+  {
+    id: "acucar-coco", nome: "Açúcar de Coco", categoria: "Adoçantes", icon: "ti-leaf", cor: "#8B5A2E",
+    descricao: "Adoçante natural de baixo índice glicêmico extraído da seiva da palmeira de coco. Rico em minerais e inulina.",
+    comoAge: "A inulina presente no açúcar de coco retarda a absorção de glicose no intestino, resultando em índice glicêmico de 35 — muito menor que o açúcar refinado (65). A seiva da palmeira é rica em potássio, zinco, ferro e vitaminas do complexo B. Não passa por refinamento químico, preservando os minerais naturais.",
+    beneficios: ["Índice glicêmico 35 — muito menor que açúcar refinado","Rico em potássio, zinco e ferro","Inulina prebiótica — alimenta a microbiota intestinal","Sabor levemente caramelado e rico","Não refinado — mantém os minerais naturais","Mais sustentável que o açúcar de cana"],
+    diferenciais: ["Extraído da seiva fresca da palmeira — processo artesanal","Granulometria fina para dissolução perfeita","Sem aditivos, conservantes ou branqueamento"],
+    comoUsar: ["Substituir açúcar na proporção 1:1","Café, chás, receitas, vitaminas e iogurte","Carameliza muito bem — ótimo para receitas assadas","Combinação especial com canela e cacau"],
+    combinacoes: [
+      { produto: "Canela em Pó", motivo: "A canela reduz ainda mais o índice glicêmico do açúcar de coco. Combinação clássica e funcional.", script: "Açúcar de coco com canela — adoçante natural que cuida da glicemia." },
+      { produto: "Cacau em Pó 100%", motivo: "A base perfeita do chocolate quente funcional — açúcar de baixo IG com antioxidantes do cacau.", script: "Chocolate quente saudável com açúcar de coco — sabor premium sem culpa." },
+      { produto: "Farinha de Aveia", motivo: "Beta-glucana da aveia complementa a inulina do açúcar de coco para máximo controle glicêmico.", script: "Aveia com açúcar de coco — o café da manhã mais equilibrado para a glicemia." }
+    ]
+  },
+  {
+    id: "quinoa", nome: "Quinoa", categoria: "Cereais", icon: "ti-grain", cor: "#6B8B2E",
+    descricao: "Pseudocereal com proteína completa — todos os aminoácidos essenciais. O único grão vegetal com perfil proteico completo.",
+    comoAge: "A quinoa contém os 9 aminoácidos essenciais em proporções adequadas, tornando-a uma proteína completa — raridade no reino vegetal. É naturalmente sem glúten, rica em fibras e tem índice glicêmico baixo (53). As saponinas da casca têm ação anti-inflamatória e antifúngica.",
+    beneficios: ["Proteína vegetal completa — todos os aminoácidos essenciais","Sem glúten — segura para celíacos","Índice glicêmico baixo — controla a glicemia","Rica em ferro, magnésio e zinco","Alto teor de fibras para saciedade","Fonte de manganês para saúde óssea"],
+    diferenciais: ["Pré-lavada — remove saponinas sem amargor","Grãos inteiros selecionados — cozimento uniforme","Produto importado de qualidade premium dos Andes"],
+    comoUsar: ["Lavar em água corrente antes de cozinhar","Proporção 1 xícara de quinoa para 2 de água","Cozinhar por 15 min em fogo baixo","Substituir arroz, usar em saladas, sopas ou como base de bowls"],
+    combinacoes: [
+      { produto: "Mix de Sementes", motivo: "Proteína completa da quinoa + ômega-3 das sementes = refeição com perfil nutricional superior.", script: "Quinoa com mix de sementes — refeição mais nutritiva que qualquer prato de carne." },
+      { produto: "Moringa em Pó", motivo: "Ambas têm proteína vegetal de alta qualidade e perfis minerais complementares.", script: "Quinoa com moringa — a base vegetal mais completa em nutrição." },
+      { produto: "Acerola em Pó", motivo: "Vitamina C aumenta a absorção do ferro não-heme da quinoa em até 3x.", script: "Sempre adicionar vitamina C para aproveitar o ferro da quinoa." }
+    ]
+  },
+  {
+    id: "castanha-para", nome: "Castanha do Pará", categoria: "Oleaginosas", icon: "ti-nut", cor: "#7B5B2E",
+    descricao: "A maior fonte natural de selênio do planeta. Apenas 2 unidades por dia suprem 100% da necessidade diária.",
+    comoAge: "O selênio da castanha do Pará é essencial para a produção de glutationa peroxidase — a principal enzima antioxidante endógena do organismo. Também ativa a conversão do hormônio tireoidiano T4 em T3 ativo. A forma orgânica de selênio (selenometionina) tem absorção muito superior à inorgânica de suplementos.",
+    beneficios: ["Maior fonte natural de selênio — antioxidante master","Suporte à tireoide — ativa conversão T4 em T3","Proteção cardiovascular — reduz LDL oxidado","Imunidade — selênio é cofator de células NK","Saúde da pele e cabelo","Ação anticancerígena potencial (estudos em andamento)"],
+    diferenciais: ["Produto 100% brasileiro — Amazônia sustentável","Colhida e embalada preservando os óleos essenciais","Seleção rigorosa — sem aflatoxinas"],
+    comoUsar: ["2 unidades ao dia é o suficiente — não exceder 4/dia","Consumir in natura como snack","Picada em saladas, vitaminas ou receitas","Não torrar em altas temperaturas — degrada o selênio"],
+    combinacoes: [
+      { produto: "Mix de Sementes", motivo: "Selênio da castanha + zinco e vitamina E das sementes = escudo antioxidante completo.", script: "A combinação antioxidante mais poderosa da natureza vegetal." },
+      { produto: "Moringa em Pó", motivo: "Selênio da castanha potencializa a ação antioxidante dos isotiocianatos da moringa.", script: "2 castanhas com moringa — a combinação imunoprotetora mais simples e eficaz." },
+      { produto: "Cacau em Pó 100%", motivo: "Selênio + magnésio + flavonoides = proteção cardiovascular em múltiplos mecanismos.", script: "Castanha do Pará com cacau — o snack mais cardioprotetor que existe." }
+    ]
+  },
+  {
+    id: "amendoa", nome: "Amêndoa", categoria: "Oleaginosas", icon: "ti-nut", cor: "#8B7040",
+    descricao: "Rica em vitamina E, magnésio e gordura monoinsaturada. A oleaginosa com maior evidência científica para saúde cardiovascular.",
+    comoAge: "A vitamina E da amêndoa (alfa-tocoferol) é lipossolúvel e protege as membranas celulares da oxidação lipídica — processo central no envelhecimento e nas doenças cardiovasculares. O magnésio regula mais de 300 reações enzimáticas. O ácido oleico melhora o perfil lipídico reduzindo LDL sem diminuir HDL.",
+    beneficios: ["Maior teor de vitamina E entre as oleaginosas","Saúde cardiovascular — LDL reduzido","Rica em magnésio para relaxamento e energia","Controle glicêmico — baixo IG","Saciedade prolongada — proteína + gordura + fibra","Saúde da pele — vitamina E antienvelhecimento"],
+    diferenciais: ["Amêndoas selecionadas sem rachaduras ou fungos","Torradas na temperatura ideal — preserva a vitamina E","Sem conservantes ou óleos adicionados"],
+    comoUsar: ["20 a 30g ao dia (15–20 unidades)","Snack entre refeições — a mais saciante das oleaginosas","Laminada sobre saladas, iogurte ou aveia","Triturada como base de leite de amêndoas caseiro"],
+    combinacoes: [
+      { produto: "Chia", motivo: "Vitamina E da amêndoa protege os ácidos graxos ômega-3 da chia da oxidação.", script: "Amêndoa com chia — a gordura boa da amêndoa preserva o ômega-3 da chia." },
+      { produto: "Cacau em Pó 100%", motivo: "Vitamina E lipossolúvel + flavonoides = proteção cardiovascular de dupla ação.", script: "Amêndoa com cacau — o chocolate funcional caseiro mais rico em vitamina E." },
+      { produto: "Acerola em Pó", motivo: "Vitamina C regenera a vitamina E após ela neutralizar radicais livres — ciclo antioxidante completo.", script: "Vitamina C e vitamina E se regeneram mutuamente — a dupla antioxidante perfeita." }
+    ]
+  },
+  {
+    id: "tamara", nome: "Tâmara", categoria: "Frutas Secas", icon: "ti-apple", cor: "#8B4A2E",
+    descricao: "Fruta seca com poder adoçante natural, rica em fibras, potássio e antioxidantes. O substituto natural mais eficaz do açúcar refinado.",
+    comoAge: "Os açúcares naturais da tâmara (frutose e glicose) são acompanhados por fibras que retardam sua absorção, resultando em resposta glicêmica moderada apesar do sabor doce intenso. Rica em compostos fenólicos com ação antioxidante e anti-inflamatória. O potássio regula a pressão arterial e o equilíbrio hídrico.",
+    beneficios: ["Adoçante natural com fibras — resposta glicêmica moderada","Rica em potássio para saúde cardiovascular","Alto teor de ferro — combate anemia","Fibras solúveis e insolúveis para intestino","Energia rápida e sustentada","Antioxidantes — flavonoides e carotenoides"],
+    diferenciais: ["Tâmara jumbo premium — polpa úmida e carnuda","Sem caroço para facilitar o uso","Sem conservantes ou xaropes adicionados"],
+    comoUsar: ["2 a 4 unidades ao dia","Substitui o açúcar em receitas — triturar com água vira pasta de tâmara","Energy balls, barras naturais, bolos e vitaminas","Snack rápido de energia com oleaginosas"],
+    combinacoes: [
+      { produto: "Pasta de Amendoim Natural", motivo: "Combinação clássica de energia rápida da tâmara com proteína e gordura boa do amendoim. Base das energy balls.", script: "Tâmara com pasta de amendoim — a energy ball mais simples e nutritiva." },
+      { produto: "Cacau em Pó 100%", motivo: "Tâmara adoça naturalmente o cacau sem açúcar refinado. A base do trufão funcional.", script: "Tâmara com cacau — chocolate natural sem açúcar adicionado." },
+      { produto: "Castanha do Pará", motivo: "Energia rápida da tâmara + gordura boa e selênio da castanha = snack completo.", script: "Tâmara com castanha — o snack mais energético e antioxidante." }
+    ]
+  },
+  {
+    id: "goji-berry", nome: "Goji Berry", categoria: "Frutas Secas", icon: "ti-cherry", cor: "#8B1A1A",
+    descricao: "Superfruita asiática com um dos perfis antioxidantes mais completos do mundo. Rica em betaínas, zeaxantina e polissacarídeos.",
+    comoAge: "Os polissacarídeos do goji berry (LBP) estimulam a produção de células NK e macrófagos, modulando o sistema imune. A zeaxantina é o principal carotenoide protetor da mácula ocular. As betaínas têm ação hepatoprotetora e anti-inflamatória. ORAC (capacidade antioxidante) entre os mais altos das frutas.",
+    beneficios: ["Antioxidante potente — ORAC elevado","Proteção ocular — zeaxantina para saúde da mácula","Imunidade — polissacarídeos imunomoduladores","Hepatoprotetor — protege e regenera o fígado","Energia e disposição","Melhora do sono — precursor de melatonina"],
+    diferenciais: ["Goji berry inteiro desidratado — sem corantes","Importado da origem — China produtora premium","Certificado sem resíduos de pesticidas acima do limite"],
+    comoUsar: ["20 a 30g ao dia (1 punhado)","Snack in natura ou hidratado em água por 10 min","Aveia, granola, iogurte ou saladas","Chá de goji berry — deixar em água quente por 5 min"],
+    combinacoes: [
+      { produto: "Granola Natural", motivo: "Antioxidantes do goji elevam o valor nutricional da granola para um nível de superfood.", script: "Granola com goji berry — o café da manhã mais antioxidante do mundo." },
+      { produto: "Mix de Sementes", motivo: "Zeaxantina lipossolúvel do goji tem absorção aumentada pela gordura boa das sementes.", script: "Gordura boa das sementes aumenta a absorção do antioxidante do goji." },
+      { produto: "Acerola em Pó", motivo: "Vitamina C potencializa a ação dos carotenoides e antocianinas do goji berry.", script: "A dupla antioxidante mais completa para pele e imunidade." }
+    ]
+  },
+  {
+    id: "canela", nome: "Canela em Pó", categoria: "Especiarias", icon: "ti-flame", cor: "#8B4A1A",
+    descricao: "A especiaria com maior evidência científica para controle glicêmico. Antimicrobiana, anti-inflamatória e termogênica.",
+    comoAge: "O cinamaldeído da canela ativa receptores de insulina nas células musculares, melhorando a captação de glicose independente da insulina. Isso reduz a glicemia pós-refeição em 10–29% conforme estudos. Também inibe a alfa-glucosidase — enzima que quebra o amido em glicose. Tem ação antimicrobiana comprovada contra H. pylori.",
+    beneficios: ["Controle glicêmico — reduz pico de insulina","Antimicrobiana — combate H. pylori e Candida","Termogênica leve — acelera o metabolismo","Anti-inflamatória — inibe NF-kB","Saúde cardiovascular — reduz triglicerídeos","Antioxidante — polifenóis de alta atividade"],
+    diferenciais: ["Canela verdadeira (Ceylon) — não a cassia com cumarina","Aroma intenso indica alta concentração de cinamaldeído","Pó fino de dissolução rápida"],
+    comoUsar: ["½ a 1 colher de chá ao dia","Café, aveia, vitaminas, receitas ou leite vegetal","Adicionar na aveia para reduzir o IG da refeição","Canela com mel e gengibre — blend anti-inflamatório"],
+    combinacoes: [
+      { produto: "Farinha de Aveia", motivo: "Cinamaldeído da canela + beta-glucana da aveia = controle glicêmico máximo na refeição.", script: "Aveia com canela todos os dias — prevenção de diabetes em cada colher." },
+      { produto: "Açúcar de Coco", motivo: "Canela reduz ainda mais o índice glicêmico do açúcar de coco, já naturalmente baixo.", script: "A combinação de adoçante natural mais segura para a glicemia." },
+      { produto: "Gengibre em Pó", motivo: "Dupla anti-inflamatória e antimicrobiana. Sinergia termogênica comprovada.", script: "Canela com gengibre — o blend mais poderoso para imunidade e metabolismo." }
+    ]
+  },
+  {
+    id: "levedura-nutricional", nome: "Levedura Nutricional", categoria: "Superalimentos", icon: "ti-flake", cor: "#8B8B1A",
+    descricao: "Superalimento completo com sabor natural de queijo. Rica em proteína completa, vitaminas B e beta-glucanas imunoprotetoras.",
+    comoAge: "A levedura nutricional (Saccharomyces cerevisiae inativada) contém beta-glucanas 1,3/1,6 que ativam macrófagos e células NK do sistema imune — efeito imunomodulador comprovado. Contém vitaminas B1, B2, B3, B6 e B9 naturalmente. Fonte completa de proteína vegetal com todos os aminoácidos essenciais. O sabor umami natural substitui o queijo em dietas veganas.",
+    beneficios: ["Proteína vegetal completa — 50g por 100g","Vitaminas do complexo B — energia celular","Beta-glucanas — imunomodulação potente","Sabor de queijo natural — ótimo para receitas","Rica em zinco e selênio","Sem glúten — segura para celíacos"],
+    diferenciais: ["Desativada — sem levedura viva, não fermenta","Flocos finos para dissolução e incorporação rápida","Sem adição de saborizantes — sabor 100% natural"],
+    comoUsar: ["1 a 3 colheres de sopa ao dia","Polvilhar sobre saladas, massas, pipoca ou sopas","Misturar em molhos, vitaminas ou ovos mexidos","Substituir queijo parmesão em 100% das receitas"],
+    combinacoes: [
+      { produto: "Quinoa", motivo: "Dupla de proteína vegetal completa — perfis de aminoácidos diferentes que se complementam.", script: "Levedura com quinoa — a refeição vegana mais proteica e completa." },
+      { produto: "Spirulina", motivo: "Beta-glucanas da levedura + ficocianina da spirulina = imunidade modulada por dois mecanismos distintos.", script: "A combinação imunoprotetora mais poderosa do reino vegetal." },
+      { produto: "Moringa em Pó", motivo: "Vitaminas B da levedura + multivitamínico da moringa = suplementação natural completa.", script: "Levedura com moringa — o multivitamínico natural mais completo que existe." }
+    ]
+  },
+  {
+    id: "gergelim", nome: "Gergelim", categoria: "Sementes", icon: "ti-seed", cor: "#8B8B4A",
+    descricao: "Semente milenar rica em cálcio vegetal, lignanas antioxidantes e gorduras monoinsaturadas. Base do tahine e do óleo de gergelim.",
+    comoAge: "As lignanas do gergelim (sesamina e sesamolina) têm potente ação antioxidante e modulam o metabolismo do colesterol. O gergelim é uma das maiores fontes vegetais de cálcio — 100g contém mais cálcio que o leite. A vitamina E e os ácidos graxos insaturados protegem o sistema cardiovascular.",
+    beneficios: ["Maior fonte vegetal de cálcio — saúde óssea","Lignanas antioxidantes e anti-inflamatórias","Gordura monoinsaturada cardioprotetora","Rico em ferro, zinco e magnésio","Proteína vegetal de qualidade","Propriedades hepatoprotetoras (sesamina)"],
+    diferenciais: ["Gergelim despeliculado — maior biodisponibilidade do cálcio","Torrado na hora — maximiza aroma e preserva os óleos","Sem conservantes ou umectantes"],
+    comoUsar: ["1 a 2 colheres de sopa ao dia","Polvilhar sobre saladas, arroz, carnes e pães","Tahine caseiro — triturar com azeite e limão","Combinar com mel para doce funcional"],
+    combinacoes: [
+      { produto: "Chia", motivo: "Cálcio do gergelim + ômega-3 da chia = saúde óssea e anti-inflamatório completo.", script: "Gergelim com chia — a dupla que cuida dos ossos e do coração ao mesmo tempo." },
+      { produto: "Quinoa", motivo: "Aminoácidos do gergelim complementam os da quinoa, formando proteína vegetal ainda mais completa.", script: "Gergelim com quinoa — proteína vegetal mais completa que a maioria das carnes." },
+      { produto: "Acerola em Pó", motivo: "Vitamina C aumenta a absorção do ferro não-heme e do cálcio do gergelim.", script: "Vitamina C essencial para absorver o cálcio e ferro do gergelim." }
+    ]
+  },
+  {
+    id: "ginkobiloba", nome: "Ginkobiloba em Pó", categoria: "Superalimentos", icon: "ti-brain", cor: "#2E8B4A",
+    descricao: "Extrato da árvore mais antiga do mundo. Comprovadamente eficaz para circulação cerebral, memória e foco.",
+    comoAge: "Os flavonoides e terpenoides do ginkgo inibem o fator ativador de plaquetas (PAF), melhorando a microcirculação cerebral. O aumento do fluxo sanguíneo no cérebro melhora a captação de glicose e oxigênio pelos neurônios. Estudos clínicos comprovam melhora da memória de curto prazo, atenção e velocidade de processamento cognitivo.",
+    beneficios: ["Melhora da memória e concentração","Circulação cerebral aumentada","Proteção neuronal — antioxidante neuroproteto","Zumbido no ouvido (tinnitus) — redução comprovada","Vertigem e tontura — melhora da microcirculação","Retardo do declínio cognitivo associado ao envelhecimento"],
+    diferenciais: ["Extrato padronizado em flavonoides e terpenoides","Pó de fácil incorporação em vitaminas e cápsulas caseiras","Sem aditivos ou excipientes"],
+    comoUsar: ["240 a 480mg ao dia (conforme orientação)","Misturar em vitaminas, sucos ou cápsulas caseiras","Efeito observado após 4 a 12 semanas de uso contínuo","Não interromper bruscamente — fazer desmame gradual"],
+    combinacoes: [
+      { produto: "Guaraná em Pó", motivo: "Ginkgo melhora a microcirculação cerebral enquanto o guaraná fornece xantinas para foco imediato. Sinergia cognitiva.", script: "Ginkgo com guaraná — foco agora e proteção neuronal a longo prazo." },
+      { produto: "Maca Peruana", motivo: "Adaptógenos complementares — maca para energia e equilíbrio hormonal, ginkgo para cognição.", script: "Maca com ginkgo — a dupla adaptógena para performance mental e física." },
+      { produto: "Açaí em Pó", motivo: "Antocianinas do açaí + flavonoides do ginkgo = neuroproteção antioxidante máxima.", script: "Açaí com ginkgo — o blend mais neuroprotetor que existe." }
+    ]
+  },
+  {
+    id: "farinha-grao-bico", nome: "Farinha de Grão de Bico", categoria: "Farinhas", icon: "ti-grain", cor: "#C4952A",
+    descricao: "Farinha sem glúten com alto teor de proteína vegetal e fibras. Base da culinária mediterrânea e árabe.",
+    comoAge: "A farinha de grão de bico tem índice glicêmico baixo (35) graças à combinação de proteína, fibra e amido resistente. A proteína vegetal (22g/100g) promove saciedade via hormônios GLP-1 e PYY. Os galactooligossacarídeos funcionam como prebióticos, alimentando bifidobactérias e lactobacilos.",
+    beneficios: ["Alto teor de proteína vegetal — 22g/100g","Sem glúten — segura para celíacos","Índice glicêmico baixo — controle glicêmico","Prebiótico natural — alimenta a microbiota","Rica em ferro, folato e fósforo","Versátil — base para farinhas sem glúten"],
+    diferenciais: ["Grão de bico torrado e moído fino","Textura leve para uso em receitas variadas","Sem aditivos ou conservantes"],
+    comoUsar: ["Substituir até 25% da farinha de trigo em receitas","Base para falafel, socca, panquecas e massas sem glúten","Engrossante para sopas e molhos","Misturar com farinha de arroz para melhor textura"],
+    combinacoes: [
+      { produto: "Farinha de Aveia", motivo: "A combinação cria um perfil completo de aminoácidos e um blend de fibras solúveis e insolúveis.", script: "Farinha de grão de bico com aveia — a base mais nutritiva para pães sem glúten." },
+      { produto: "Psyllium", motivo: "Psyllium dá a liga que a farinha sem glúten não tem. A combinação perfeita para pão sem glúten.", script: "Farinha de grão de bico com psyllium — o segredo do pão sem glúten que não esfarela." },
+      { produto: "Acerola em Pó", motivo: "Vitamina C aumenta a absorção do ferro do grão de bico em até 3x.", script: "Sempre adicionar vitamina C para aproveitar o ferro do grão de bico." }
+    ]
+  },
+  {
+    id: "farinha-batata-doce", nome: "Farinha de Batata Doce", categoria: "Farinhas", icon: "ti-potato", cor: "#C4692A",
+    descricao: "Rica em betacaroteno, potássio e amido resistente. Energia de qualidade com baixo índice glicêmico.",
+    comoAge: "O betacaroteno (pró-vitamina A) da batata doce é lipossolúvel e se converte em vitamina A conforme a necessidade do organismo, sem risco de toxicidade. O amido resistente presente no produto desidratado funciona como prebiótico. O potássio regula a pressão arterial e o equilíbrio hídrico.",
+    beneficios: ["Rica em betacaroteno — saúde ocular e imunidade","Potássio para pressão arterial","Amido resistente prebiótico","Energia de liberação gradual","Sem glúten","Rica em vitaminas B6 e C"],
+    diferenciais: ["Desidratada a baixa temperatura — preserva o betacaroteno","Cor laranja intensa indica alta concentração de carotenoides","Sabor levemente adocicado e natural"],
+    comoUsar: ["2 a 4 colheres de sopa ao dia","Vitaminas, panquecas, mingau ou pão","Misturar com farinha de aveia para receitas mais nutritivas","Engrossante natural para sopas e vitaminas"],
+    combinacoes: [
+      { produto: "Farinha de Aveia", motivo: "Betacaroteno lipossolúvel tem absorção aumentada. Complementam fibras solúveis e insolúveis.", script: "Batata doce com aveia — a mistura de farinhas mais nutritiva para o café da manhã." },
+      { produto: "Canela em Pó", motivo: "Canela reduz o IG da batata doce e melhora a sensibilidade à insulina. Combinação natural.", script: "Farinha de batata doce com canela — energia boa sem pico de glicemia." },
+      { produto: "Óleo de Coco Extravirgem", motivo: "Gordura boa aumenta a absorção do betacaroteno lipossolúvel da batata doce em até 5x.", script: "Sempre combinar batata doce com uma gordura boa para absorver o betacaroteno." }
+    ]
+  },
+  {
+    id: "hibisco", nome: "Hibisco", categoria: "Chás", icon: "ti-flower", cor: "#8B1A4A",
+    descricao: "Flor medicinal com ação diurética, antioxidante e anti-hipertensiva comprovadas em estudos clínicos.",
+    comoAge: "Os ácidos hibístico, cítrico e tartárico têm ação diurética que elimina excesso de sódio e água sem perder potássio. As antocianinas inibem a enzima conversora de angiotensina (ECA) — o mesmo mecanismo dos anti-hipertensivos — reduzindo a pressão arterial. A quercetina tem ação anti-inflamatória e antioxidante.",
+    beneficios: ["Diurético potente — elimina retenção de líquidos","Reduz pressão arterial — inibe ECA","Antioxidante rico em antocianinas","Auxílio no emagrecimento — inibe amilase","Saúde cardiovascular — reduz LDL","Anti-inflamatório — quercetina e antocianinas"],
+    diferenciais: ["Flores inteiras desidratadas — máxima concentração de ativos","Cor vermelho intenso indica alta qualidade","Sem pesticidas — produto rastreável"],
+    comoUsar: ["1 colher de sopa em 500ml de água fria por 12h (melhor método)","Ou 200ml de água quente a 80°C por 5 min — não ferver","2 a 3 xícaras ao dia","Ótimo gelado com hortelã e limão — saborosíssimo"],
+    combinacoes: [
+      { produto: "Gengibre em Pó", motivo: "Hibisco diurético + gengibre termogênico = o blend de emagrecimento mais eficaz e saboroso.", script: "Hibisco com gengibre — o chá de emagrecimento mais eficaz e gostoso." },
+      { produto: "Acerola em Pó", motivo: "Vitamina C potencializa a absorção das antocianinas do hibisco em até 3x.", script: "Adicionar acerola ao hibisco multiplica o efeito antioxidante." },
+      { produto: "Canela em Pó", motivo: "Canela complementa a ação anti-hipertensiva do hibisco com ação antimicrobiana e termogênica.", script: "Hibisco com canela — blend anti-hipertensivo e antioxidante completo." }
+    ]
+  },
+  {
+    id: "cranberry", nome: "Cranberry Desidratado", categoria: "Frutas Secas", icon: "ti-cherry", cor: "#8B1A2E",
+    descricao: "Fruta americana com ação comprovada contra infecções urinárias. Rica em proantocianidinas e vitamina C.",
+    comoAge: "As proantocianidinas tipo A do cranberry impedem a adesão de bactérias E. coli à parede da bexiga e uretra — mecanismo único que previne infecções urinárias sem criar resistência bacteriana. Também têm ação antioxidante e anti-inflamatória. A quercetina protege o sistema cardiovascular.",
+    beneficios: ["Prevenção de infecções urinárias — evidência A","Anti-adesivo bacteriano — sem resistência antibiótica","Antioxidante — proantocianidinas tipo A","Saúde bucal — inibe Streptococcus mutans","Saúde cardiovascular — quercetina","Rica em vitamina C e manganês"],
+    diferenciais: ["Cranberry inteiro sem sementes","Baixo teor de açúcar adicionado comparado ao mercado","Processo de desidratação que preserva as proantocianidinas"],
+    comoUsar: ["30 a 40g ao dia (1 punhado)","Snack in natura, granola, aveia ou iogurte","Saladas com queijo e nozes — combinação clássica","Suco de cranberry diluído com água e acerola"],
+    combinacoes: [
+      { produto: "Acerola em Pó", motivo: "Vitamina C da acerola potencializa a ação das proantocianidinas e aumenta a acidez benéfica para o trato urinário.", script: "Cranberry com acerola — a proteção urinária mais completa e natural." },
+      { produto: "Goji Berry", motivo: "Dupla de frutas vermelhas antioxidantes com perfis complementares de flavonoides.", script: "Cranberry com goji — a combinação de frutas vermelhas mais antioxidante." },
+      { produto: "Granola Natural", motivo: "Textura crocante e sabor levemente ácido do cranberry transforma a granola em um blend premium.", script: "Cranberry na granola — o upgrade que todo café da manhã merecia." }
+    ]
+  },
+  {
+    id: "guarana-po", nome: "Guaraná em Pó", categoria: "Superalimentos", icon: "ti-bolt-lightning", cor: "#8B3A1A",
+    descricao: "Fruto amazônico com o maior teor natural de cafeína do mundo. Energia mais suave e duradoura que o café.",
+    comoAge: "O guaraná contém cafeína, teofilina e teobromina — a tríade de xantinas que inibem a fosfodiesterase, aumentando o AMPc intracelular e prolongando a ação da adrenalina. No guaraná, as xantinas estão ligadas a taninos que retardam sua liberação, resultando em energia gradual sem pico e crash. Também melhora a memória de curto prazo conforme estudos.",
+    beneficios: ["Energia gradual e prolongada — sem crash","Foco e atenção — xantinas cerebrais","Melhora da memória de curto prazo","Termogênico — auxílio no emagrecimento","Antioxidante — taninos e catequinas","Reduz a fadiga mental e física"],
+    diferenciais: ["Semente de guaraná ralada na hora — máxima potência","Produto 100% amazônico — origem rastreável","Sem aditivos ou conservantes"],
+    comoUsar: ["½ colher de chá ao dia (1 a 2g máximo)","Misturar em sucos, vitaminas ou água","Consumir pela manhã ou antes de atividades físicas","Evitar após as 16h para não interferir no sono"],
+    combinacoes: [
+      { produto: "Açaí em Pó", motivo: "Combinação amazônica clássica — energia do guaraná + antioxidante do açaí. O blend do Brasil.", script: "Guaraná com açaí — o blend 100% amazônico de energia e antioxidante." },
+      { produto: "Maca Peruana", motivo: "Energia imediata do guaraná + energia adaptógena da maca = performance física e mental completa.", script: "Guaraná com maca — energia agora e resistência ao longo do dia." },
+      { produto: "Chia", motivo: "Fibra e ômega-3 da chia retardam ainda mais a absorção das xantinas do guaraná, prolongando o efeito.", script: "Guaraná com chia — energia ainda mais gradual e sustentada." }
     ]
   }
 ];
